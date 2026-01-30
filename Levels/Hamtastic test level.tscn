@@ -1,8 +1,8 @@
-[gd_scene format=4 uid="uid://dt6xiqj7cgary"]
+[gd_scene format=4 uid="uid://earsmdcv8w4h"]
 
-[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="1_2nk32"]
-[ext_resource type="Script" path="res://Levels/hamtastic_test_level.gd" id="1_foulw"]
-[ext_resource type="Script" path="res://Player/player.gd" id="2_dgde2"]
+[ext_resource type="PackedScene" uid="uid://btj24jthmcl8p" path="res://Player/Player.tscn" id="1_2nk32"]
+[ext_resource type="Script" uid="uid://dbtlbkpgs2lqj" path="res://Levels/hamtastic_test_level.gd" id="1_foulw"]
+[ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="2_dgde2"]
 [ext_resource type="Texture2D" uid="uid://dgbjxj2bgegl1" path="res://Art/Temp art/build_atlas.png" id="2_py3g0"]
 [ext_resource type="PackedScene" uid="uid://xp1xct7dsj32" path="res://Player/Player 2 FOR TESTING/Player 2.tscn" id="3_dgde2"]
 
@@ -183,6 +183,7 @@ texture_region_size = Vector2i(32, 32)
 1:4/0 = 0
 2:4/0 = 0
 3:4/0 = 0
+4:4/0 = 0
 5:4/0 = 0
 6:4/0 = 0
 7:4/0 = 0
@@ -228,6 +229,9 @@ texture_region_size = Vector2i(32, 32)
 4:5/0 = 0
 5:5/0 = 0
 6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
 10:5/0 = 0
 11:5/0 = 0
 12:5/0 = 0
@@ -275,7 +279,12 @@ texture_region_size = Vector2i(32, 32)
 0:6/0 = 0
 1:6/0 = 0
 2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
 6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
 9:6/0 = 0
 10:6/0 = 0
 11:6/0 = 0
@@ -319,6 +328,9 @@ texture_region_size = Vector2i(32, 32)
 0:7/0 = 0
 1:7/0 = 0
 2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
 10:7/0 = 0
 11:7/0 = 0
 12:7/0 = 0
@@ -408,6 +420,9 @@ texture_region_size = Vector2i(32, 32)
 6:9/0 = 0
 7:9/0 = 0
 8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
 12:9/0 = 0
 14:9/0 = 0
 15:9/0 = 0
@@ -451,6 +466,9 @@ texture_region_size = Vector2i(32, 32)
 6:10/0 = 0
 7:10/0 = 0
 8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
 14:10/0 = 0
 15:10/0 = 0
 20:10/0 = 0
@@ -490,6 +508,9 @@ texture_region_size = Vector2i(32, 32)
 6:11/0 = 0
 7:11/0 = 0
 8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
 14:11/0 = 0
 15:11/0 = 0
 20:11/0 = 0
@@ -3311,14 +3332,6 @@ texture_region_size = Vector2i(32, 32)
 61:63/0 = 0
 62:63/0 = 0
 63:63/0 = 0
-4:4/0 = 0
-8:4/0 = 0
-9:9/size_in_atlas = Vector2i(3, 3)
-9:9/0 = 0
-7:5/0 = 0
-7:6/0 = 0
-7:7/size_in_atlas = Vector2i(2, 2)
-7:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_veps2"]
 tile_size = Vector2i(32, 32)
