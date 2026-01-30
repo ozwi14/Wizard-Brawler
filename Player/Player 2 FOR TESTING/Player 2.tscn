@@ -1,20 +1,21 @@
 [gd_scene format=3 uid="uid://xp1xct7dsj32"]
 
 [ext_resource type="Script" uid="uid://drsnjufno0svl" path="res://Player/Player 2 FOR TESTING/player 2.gd" id="1_qflsq"]
-[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_qhcag"]
+[ext_resource type="Texture2D" uid="uid://cchs2qra8182y" path="res://Art/Temp art/Base_Wizard.png" id="2_tr116"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qflsq"]
 size = Vector2(62.450687, 127.15664)
 
 [node name="Player" type="CharacterBody2D" unique_id=1963970088]
+modulate = Color(0.23333335, 1, 0, 1)
 scale = Vector2(0.44835374, 0.45613033)
 collision_layer = 2
 script = ExtResource("1_qflsq")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=7470183]
-modulate = Color(0, 0.78039217, 0, 1)
-scale = Vector2(0.5, 1)
-texture = ExtResource("2_qhcag")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=326315086]
 shape = SubResource("RectangleShape2D_qflsq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1876138946]
+position = Vector2(0, -8.88889)
+scale = Vector2(0.5208334, 0.50347227)
+texture = ExtResource("2_tr116")
