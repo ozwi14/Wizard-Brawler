@@ -1,8 +1,14 @@
-[gd_scene format=3 uid="uid://dbta6xnougorm"]
+[gd_scene format=3 uid="uid://d227de6kfh00j"]
 
 [ext_resource type="PackedScene" uid="uid://d3fssig5r8xou" path="res://Spells/Spell Scenes/test_spell_spawner.tscn" id="1_386df"]
+[ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Scenes/spell_lob.tscn" id="2_rpovx"]
 
 [node name="Andrew test level" type="Node2D" unique_id=1359912899]
+
+[node name="Test Spell Spawner lob" parent="." unique_id=70633038 instance=ExtResource("1_386df")]
+position = Vector2(160, 303)
+rotation = -0.79412484
+child_spell = ExtResource("2_rpovx")
 
 [node name="Test Spell Spawner" parent="." unique_id=288123730 instance=ExtResource("1_386df")]
 position = Vector2(153, 201)

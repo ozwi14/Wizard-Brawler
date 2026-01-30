@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bd4rtdbgu8tey"]
+
+[ext_resource type="Script" uid="uid://bcjqkop1asjwk" path="res://Spells/Spell Code/spell_lob.gd" id="1_t2aj0"]
+[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_fcq60"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_poaw0"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[node name="spell_lob" type="CharacterBody2D" unique_id=1082149160]
+script = ExtResource("1_t2aj0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_fcq60")
+
+[node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]
+shape = SubResource("RectangleShape2D_mr5cl")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
+process_material = SubResource("ParticleProcessMaterial_poaw0")

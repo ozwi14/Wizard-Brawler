@@ -8,8 +8,9 @@ const SPEED = 300.0
 
 func _ready() -> void:
 	#
-	velocity = transform.x * SPEED
+	direction = direction.normalized()
+	velocity = direction * SPEED
 
 func _physics_process(delta: float) -> void:
-	velocity = transform.x * SPEED
+#	velocity = transform.x * SPEED
 	move_and_slide()
