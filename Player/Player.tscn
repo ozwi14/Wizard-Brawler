@@ -14,6 +14,11 @@ scale = Vector2(0.45, 0.45)
 collision_layer = 2
 script = ExtResource("1_q3lat")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055726692]
+position = Vector2(0, -8.88889)
+scale = Vector2(0.5208334, 0.50347227)
+texture = ExtResource("4_ddoul")
+
 [node name="Arrow" type="Sprite2D" parent="." unique_id=88091443]
 scale = Vector2(0.5, 1)
 texture = ExtResource("3_ddoul")
@@ -26,8 +31,3 @@ shape = SubResource("RectangleShape2D_q3lat")
 [node name="Arrow2" type="Sprite2D" parent="." unique_id=1666702658]
 texture = ExtResource("3_ddoul")
 script = ExtResource("4_8g4oa")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055726692]
-position = Vector2(0, -8.88889)
-scale = Vector2(0.5208334, 0.50347227)
-texture = ExtResource("4_ddoul")
