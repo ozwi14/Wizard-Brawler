@@ -1,14 +1,27 @@
 [gd_scene format=3 uid="uid://ct1hkm12qc3ya"]
 
 [ext_resource type="PackedScene" uid="uid://d3fssig5r8xou" path="res://Spells/Spell Scenes/test_spell_spawner.tscn" id="1_s41d2"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_predw"]
+=======
+[ext_resource type="PackedScene" uid="uid://b86o8fnoaygml" path="res://Spells/spell_list.tscn" id="2_dfvtg"]
+[ext_resource type="Script" uid="uid://sgdl0xn6cffe" path="res://Spells/spell_list.gd" id="3_px3t6"]
+>>>>>>> Stashed changes
 
 [node name="Andrew Test Level" type="Node2D" unique_id=92019870]
 
 [node name="Test Spell Spawner" parent="." unique_id=288123730 instance=ExtResource("1_s41d2")]
+<<<<<<< Updated upstream
 position = Vector2(588.00006, 441.00003)
 rotation = -2.443461
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=300803745]
 position = Vector2(67, 63)
 texture = ExtResource("2_predw")
+=======
+position = Vector2(42, 31)
+
+[node name="Spell List" parent="." unique_id=807274132 instance=ExtResource("2_dfvtg")]
+script = ExtResource("3_px3t6")
+spell_book = Array[PackedScene]([ExtResource("2_dfvtg"), ExtResource("2_dfvtg"), ExtResource("2_dfvtg")])
+>>>>>>> Stashed changes
