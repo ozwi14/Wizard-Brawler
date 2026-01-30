@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dvh6aduu1or74"]
+
+[ext_resource type="Script" uid="uid://cvniliwq1w5c1" path="res://Spells/Spell Code/spell_spawner.gd" id="1_pk30r"]
+[ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Scenes/Spell.tscn" id="2_6umto"]
+
+[node name="Spell Spawner" type="Node2D" unique_id=288123730]
+script = ExtResource("1_pk30r")
+child_spell = ExtResource("2_6umto")
