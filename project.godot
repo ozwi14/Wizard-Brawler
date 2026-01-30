@@ -11,19 +11,16 @@ config_version=5
 [application]
 
 config/name="Wizard Brawler"
-run/main_scene="uid://ct1hkm12qc3ya"
+run/main_scene="uid://dbta6xnougorm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-<<<<<<< Updated upstream
-window/size/viewport_width=1280
-window/size/viewport_height=720
-=======
 window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_height=720
 window/size/mode=3
+<<<<<<<Updatedupstreamwindow/size/viewport_width=1280
 
 [input]
 
@@ -82,11 +79,11 @@ window/size/mode=3
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="Players"
->>>>>>> Stashed changes
 
 [physics]
 
 3d/physics_engine="Jolt Physics"
+2d/default_gravity=2940.0
 
 [rendering]
 
