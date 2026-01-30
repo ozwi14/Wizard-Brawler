@@ -11,7 +11,6 @@ enum PlayerSelectionState {
 }
 
 @export var player_state : PlayerSelectionState = PlayerSelectionState.Disabled
-
 @export var ready_time_required : float = 0.5
 var ready_time_held : float = 0.0
 
@@ -39,7 +38,9 @@ func _input(event):
 			print("Start pressed by controller:", local_device_id)
 			device_id = event.device
 			player_state = PlayerSelectionState.DeviceFound
+			GameManager.DeviceLinkedToPlayer.emit()
 			GameManager.devices_mapped.append(device_id)
+			$"VBoxContainer/Player Action Request".text = "Hold Start to ready up"
 
 func _check_for_ready(delta: float) -> void:
 	if Input.is_joy_button_pressed(device_id, JOY_BUTTON_START):
@@ -49,6 +50,16 @@ func _check_for_ready(delta: float) -> void:
 		
 		if ready_time_held >= ready_time_required:
 			player_state = PlayerSelectionState.PlayerReady
+			GameManager.PlayerReady.emit()
+			$"VBoxContainer/Player Action Request".text = "I'm Ready"
 	else:
 		ready_time_held = 0.0
-	
+
+func StartWaitingForDevice() -> void:
+	player_state = PlayerSelectionState.LookingForDevice
+	$"VBoxContainer/Player Action Request".text = "Press Start Join"
+	pass
+
+func SetPlayerId(player_number : int) -> void:
+	player_id = player_number
+	$"VBoxContainer/Player Name Label".text = "Player %d" % player_id
