@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dt6xiqj7cgary"]
 
-[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="1_2nk32"]
-[ext_resource type="Script" path="res://Levels/hamtastic_test_level.gd" id="1_foulw"]
-[ext_resource type="Script" path="res://Player/player.gd" id="2_dgde2"]
+[ext_resource type="PackedScene" uid="uid://btj24jthmcl8p" path="res://Player/Player.tscn" id="1_2nk32"]
+[ext_resource type="Script" uid="uid://dbtlbkpgs2lqj" path="res://Levels/hamtastic_test_level.gd" id="1_foulw"]
+[ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="2_dgde2"]
 [ext_resource type="Texture2D" uid="uid://dgbjxj2bgegl1" path="res://Art/Temp art/build_atlas.png" id="2_py3g0"]
 [ext_resource type="PackedScene" uid="uid://xp1xct7dsj32" path="res://Player/Player 2 FOR TESTING/Player 2.tscn" id="3_dgde2"]
 
@@ -2684,6 +2684,12 @@ script = ExtResource("1_foulw")
 [node name="Player" parent="." unique_id=2116911412 instance=ExtResource("1_2nk32")]
 position = Vector2(870, 196)
 script = ExtResource("2_dgde2")
+GROUND_ACC = 200
+AIR_ACC = 25
+AIR_FRICTION = 10
+GROUND_FRICTION = 70
+MAX_WALKSPEED = 600
+JUMP_VELOCITY = 1000
 
 [node name="Player2" parent="." unique_id=1963970088 instance=ExtResource("3_dgde2")]
 position = Vector2(1113, 211)
