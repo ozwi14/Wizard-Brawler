@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Wizard Brawler"
-run/main_scene="uid://earsmdcv8w4h"
+run/main_scene="uid://d15yqprgw575i"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://dih1wlrnumghr"
 
 [display]
 
@@ -77,6 +81,14 @@ window/size/viewport_height=1080
 
 2d_physics/layer_1="World"
 2d_physics/layer_2="Players"
+
+[input]
+
+action_start={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":true,"script":null)
+]
+}
 
 [physics]
 

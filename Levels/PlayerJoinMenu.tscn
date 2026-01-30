@@ -1,9 +1,54 @@
 [gd_scene format=3 uid="uid://b78ch2jkg8fdp"]
 
-[node name="PlayerJoinMenu" type="Control" unique_id=223752700]
+[ext_resource type="Script" uid="uid://bwhyodf7j7y3k" path="res://Levels/player_join_menu.gd" id="1_7csly"]
+[ext_resource type="PackedScene" uid="uid://d15yqprgw575i" path="res://Levels/UI/PlayerSelectionBox.tscn" id="2_cmtlr"]
+
+[node name="PlayerJoinMenu" type="Control" unique_id=223752700 node_paths=PackedStringArray("player_boxes")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7csly")
+player_boxes = [NodePath("HBoxContainer/Left Side/Player 1 Box"), NodePath("HBoxContainer/Right Side/Player 2 Box"), NodePath("HBoxContainer/Left Side/Player 3 Box"), NodePath("HBoxContainer/Right Side/Player 4 Box")]
+
+[node name="Background Image" type="TextureRect" parent="." unique_id=293172243]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1468723599]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left Side" type="VBoxContainer" parent="HBoxContainer" unique_id=1402554648]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Player 1 Box" parent="HBoxContainer/Left Side" unique_id=1716006803 instance=ExtResource("2_cmtlr")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Player 3 Box" parent="HBoxContainer/Left Side" unique_id=875613909 instance=ExtResource("2_cmtlr")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Right Side" type="VBoxContainer" parent="HBoxContainer" unique_id=2058919231]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Player 2 Box" parent="HBoxContainer/Right Side" unique_id=629744938 instance=ExtResource("2_cmtlr")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Player 4 Box" parent="HBoxContainer/Right Side" unique_id=1773774814 instance=ExtResource("2_cmtlr")]
+layout_mode = 2
+size_flags_vertical = 3
