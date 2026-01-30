@@ -6,8 +6,8 @@
 [node name="Andrew Test Level" type="Node2D" unique_id=92019870]
 
 [node name="Test Spell Spawner" parent="." unique_id=288123730 instance=ExtResource("1_s41d2")]
-position = Vector2(588, 441)
-rotation = 0.23212878
+position = Vector2(588.00006, 441.00003)
+rotation = -2.443461
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=300803745]
 position = Vector2(67, 63)
