@@ -11,6 +11,9 @@ func spawn_children():
 		return
 	var subspell = child_spell.instantiate()
 	get_parent().add_child(subspell)
+	subspell.global_position = global_position
+	subspell.global_rotation = global_rotation
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
