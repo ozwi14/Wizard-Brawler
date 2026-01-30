@@ -11,9 +11,9 @@ gravity = Vector3(0, 98, 0)
 
 [node name="Spell" type="CharacterBody2D" unique_id=1082149160]
 script = ExtResource("1_poaw0")
-direction = Vector2(5, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_8qyhb")
 
 [node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]

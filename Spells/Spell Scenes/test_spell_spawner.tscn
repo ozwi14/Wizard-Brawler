@@ -10,4 +10,8 @@ child_spell = ExtResource("2_ykck8")
 [node name="Timer" type="Timer" parent="." unique_id=542351924]
 autostart = true
 
+[node name="Marker2D" type="Marker2D" parent="." unique_id=409502095]
+position = Vector2(100, 0)
+gizmo_extents = 45.1
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

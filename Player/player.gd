@@ -7,6 +7,10 @@ extends CharacterBody2D
 @export var MAX_WALKSPEED = 600
 @export var JUMP_VELOCITY = 1000
 var CAN_DOUBLEJUMP = 0
+var FIRE_ANGLE : Vector2
+var end_pos : Vector2 = Vector2(150, 150)
+var line_color : Color = Color.BLACK
+var line_thickness : float = 30.0
 
 #controls
 var key_jump : String
@@ -56,19 +60,30 @@ func _physics_process(delta: float) -> void:
 	if input_direction : 
 		#set our accleeration and friction based on if we are in the air or ground
 		if is_on_floor():
-			CUR_FRICTION = GROUND_FRICTION
-			CUR_ACC = GROUND_ACC
-		else:
-			CUR_FRICTION = AIR_FRICTION
-			CUR_ACC = AIR_ACC
-		
-		#add velocity based on character inputs
-		if velocity.x + input_direction.x * CUR_ACC < MAX_WALKSPEED and velocity.x + input_direction.x * CUR_ACC > -MAX_WALKSPEED: 
-			velocity.x +=  input_direction.x * CUR_ACC
-		
-	#do friction in horizontal direction
-	var horizontal_velocity = Vector2(velocity.x,0)
-	if horizontal_velocity.length() >0 :
-		velocity.x = move_toward(velocity.x,0,CUR_FRICTION)
+			velocity.y = -JUMP_VELOCITY
+		elif CAN_DOUBLEJUMP == 1:
+			velocity.y = -JUMP_VELOCITY
+			CAN_DOUBLEJUMP = 0
 
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis("p1 left", "p1 right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	#Determing the direction the player is intending to travle and fire
+	FIRE_ANGLE = Vector2(Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")*1000)
+	#print(FIRE_ANGLE)
+	
 	move_and_slide()
+	queue_redraw()
+	
+	
+	
+	
+#func _draw():
+	draw_line(Vector2(0,0),FIRE_ANGLE,line_color,line_thickness)
+	
+	

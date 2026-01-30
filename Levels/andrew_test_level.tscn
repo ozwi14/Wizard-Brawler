@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbta6xnougorm"]
+
+[ext_resource type="PackedScene" uid="uid://d3fssig5r8xou" path="res://Spells/Spell Scenes/test_spell_spawner.tscn" id="1_386df"]
+
+[node name="Andrew test level" type="Node2D" unique_id=1359912899]
+
+[node name="Test Spell Spawner" parent="." unique_id=288123730 instance=ExtResource("1_386df")]
+position = Vector2(153, 201)
