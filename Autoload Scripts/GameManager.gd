@@ -1,11 +1,12 @@
 extends Node
 
+var players : Array[PlayerData]
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var devices_mapped : Array[int]
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func add_players(player_id: int, device_id: int) -> void:
+	var player: PlayerData
+	player.player_id = player_id
+	player.device_id = device_id
+	
+	players.append(player)
