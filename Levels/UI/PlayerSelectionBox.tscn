@@ -37,4 +37,4 @@ text = "Player "
 [node name="Player Action Request" type="Label" parent="VBoxContainer" unique_id=485157179]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Press \"Start\""
+text = "Press Start"
