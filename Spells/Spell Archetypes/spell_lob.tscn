@@ -18,6 +18,7 @@ texture = ExtResource("2_fcq60")
 
 [node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")
+disabled = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
 process_material = SubResource("ParticleProcessMaterial_poaw0")
