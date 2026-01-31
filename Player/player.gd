@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 @export var GROUND_ACC = 200
 @export var AIR_ACC = 25
@@ -7,6 +7,9 @@ extends CharacterBody2D
 @export var MAX_WALKSPEED = 600
 @export var JUMP_VELOCITY = 1000
 var CAN_DOUBLEJUMP = 0
+
+@export var spell_array : Array[PackedScene] = []
+@onready var player_spell_spawner = $"Arrow/Player Spell Spawner"
 
 var FIRE_ANGLE : Vector2
 var end_pos : Vector2 = Vector2(150, 150)
@@ -17,13 +20,20 @@ var line_thickness : float = 30.0
 var key_jump : String
 var key_left : String
 var key_right : String
+var key_spell_x : String
+var key_spell_y : String
+var key_spell_b : String
 
 func _ready() -> void:
 	#set players controls
 	key_jump = "p1 jump"
 	key_left = "p1 left"
 	key_right = "p1 right"
-
+	key_spell_x = "p1 x"
+	key_spell_y = "p1 y"
+	key_spell_b = "p1 b"
+	
+	
 func _player_jump(input) -> void:
 		# Handle jump.
 	if Input.is_action_just_pressed(input) : 
@@ -49,7 +59,13 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	#Do jump
-	_player_jump(key_jump) 
+	_player_jump(key_jump)
+	if Input.is_action_just_pressed(key_spell_x) :
+		player_spell_spawner.spawn_children(spell_array[0])
+	if Input.is_action_just_pressed(key_spell_b) :
+		player_spell_spawner.spawn_children(spell_array[1])
+	if Input.is_action_just_pressed(key_spell_y) :
+		player_spell_spawner.spawn_children(spell_array[2])
 	
 	#get player inputs
 	var input_direction : Vector2
@@ -86,6 +102,6 @@ func _physics_process(delta: float) -> void:
 	
 	
 #func _draw():
-	draw_line(Vector2(0,0),FIRE_ANGLE,line_color,line_thickness)
+	#draw_line(Vector2(0,0),FIRE_ANGLE,line_color,line_thickness)
 	
 	

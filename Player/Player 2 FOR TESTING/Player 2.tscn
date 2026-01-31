@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qflsq"]
 size = Vector2(62.450687, 127.15664)
 
-[node name="Player" type="CharacterBody2D" unique_id=1963970088]
+[node name="Player 2" type="CharacterBody2D" unique_id=1963970088]
 modulate = Color(0.23333335, 1, 0, 1)
 scale = Vector2(0.44835374, 0.45613033)
 collision_layer = 2
