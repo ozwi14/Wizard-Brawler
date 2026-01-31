@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Wizard Brawler"
+<<<<<<< HEAD
 run/main_scene="uid://dtrc2iuljoxpt"
+=======
+run/main_scene="uid://dt6xiqj7cgary"
+>>>>>>> Hamtastic-2.0
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
