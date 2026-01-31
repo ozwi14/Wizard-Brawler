@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://qi58sa5lb4e0"]
 
 [ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="1_ddoul"]
-[ext_resource type="PackedScene" uid="uid://cjqjhqyjtbcfj" path="res://Spells/Built Spells/bolt_split.tscn" id="2_6ysni"]
+[ext_resource type="PackedScene" uid="uid://7lt0q8jmv5pc" path="res://Spells/Built Spells/repeating_exploding_bolt.tscn" id="2_6ysni"]
 [ext_resource type="PackedScene" uid="uid://ctq3ipqco3k2c" path="res://Player/Arrow.tscn" id="3_tok1r"]
+[ext_resource type="PackedScene" uid="uid://ceb4uj7hvvbih" path="res://Spells/Built Spells/potion_split.tscn" id="3_vlldt"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="6_6ysni"]
 [ext_resource type="PackedScene" uid="uid://lw2rggchldx" path="res://Player/player_prettyness.tscn" id="7_s1rgi"]
 [ext_resource type="PackedScene" uid="uid://06powvntbqde" path="res://Components/GetPlayerDirection.tscn" id="7_vlldt"]
@@ -16,7 +17,10 @@ z_index = 10
 scale = Vector2(0.2, 0.45)
 collision_layer = 2
 script = ExtResource("1_ddoul")
-spell_array = Array[PackedScene]([ExtResource("2_6ysni"), ExtResource("2_6ysni"), ExtResource("2_6ysni")])
+spell_array = Array[PackedScene]([ExtResource("2_6ysni"), ExtResource("3_vlldt"), ExtResource("3_vlldt")])
+spell_x_chain = Array[PackedScene]([ExtResource("3_vlldt"), ExtResource("3_vlldt")])
+spell_y_chain = Array[PackedScene]([ExtResource("3_vlldt")])
+spell_b_chain = Array[PackedScene]([ExtResource("3_vlldt")])
 
 [node name="Movement collision" type="CollisionShape2D" parent="." unique_id=210919730]
 position = Vector2(0, -0.22222261)

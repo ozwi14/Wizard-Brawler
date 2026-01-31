@@ -26,5 +26,8 @@ func _physics_process(delta: float) -> void:
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
 			print("Collided with: ", collision.get_collider().name)
-			if collision.get_collider().name == "Player":
-					print("woob")
+			var col = collision.get_collider()
+			if col.has_method("_player_jump"):
+				var player: Player = col
+				if player_id != player.player_data.player_id:
+					player.queue_free()
