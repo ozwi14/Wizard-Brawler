@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell.gd" id="1_poaw0"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_8qyhb"]
+[ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Scenes/spell_spawner.tscn" id="3_sycx1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -22,3 +23,12 @@ disabled = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
 process_material = SubResource("ParticleProcessMaterial_poaw0")
+
+[node name="Spell Spawner" parent="." unique_id=288123730 instance=ExtResource("3_sycx1")]
+position = Vector2(68, -2)
+
+[node name="Spell Spawner2" parent="." unique_id=550238381 instance=ExtResource("3_sycx1")]
+position = Vector2(30, -67)
+
+[node name="Spell Spawner3" parent="." unique_id=21605653 instance=ExtResource("3_sycx1")]
+position = Vector2(30, 65)

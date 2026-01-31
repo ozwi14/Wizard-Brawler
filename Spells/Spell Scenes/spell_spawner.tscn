@@ -6,3 +6,6 @@
 [node name="Spell Spawner" type="Node2D" unique_id=288123730]
 script = ExtResource("1_pk30r")
 child_spell = ExtResource("2_6umto")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1024636556]
+position = Vector2(41, 0)

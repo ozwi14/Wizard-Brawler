@@ -128,6 +128,6 @@ func _physics_process(delta: float) -> void:
 	
 	
 #func _draw():
-#	draw_line(Vector2(0,0),FIRE_ANGLE,line_color,line_thickness)
+	#draw_line(Vector2(0,0),FIRE_ANGLE,line_color,line_thickness)
 	
 	
