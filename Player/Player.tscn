@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://btj24jthmcl8p"]
 
-[ext_resource type="Script" uid="uid://drsnjufno0svl" path="res://Player/Player 2 FOR TESTING/player 2.gd" id="1_q3lat"]
-[ext_resource type="Texture2D" uid="uid://ltal2ggd6nat" path="res://Art/Temp art/arrow.png" id="3_ddoul"]
-[ext_resource type="Script" uid="uid://bcejn2g0hjaro" path="res://Player/Arrow.gd" id="4_8g4oa"]
+[ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="1_ddoul"]
+[ext_resource type="PackedScene" uid="uid://ctq3ipqco3k2c" path="res://Player/Arrow.tscn" id="3_tok1r"]
 [ext_resource type="Texture2D" uid="uid://cchs2qra8182y" path="res://Art/Temp art/Base_Wizard.png" id="4_ddoul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
@@ -10,24 +9,19 @@ size = Vector2(64, 128.44446)
 
 [node name="Player" type="CharacterBody2D" unique_id=1963970088]
 modulate = Color(1, 0, 0, 1)
+z_index = 10
 scale = Vector2(0.45, 0.45)
 collision_layer = 2
-script = ExtResource("1_q3lat")
+script = ExtResource("1_ddoul")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055726692]
 position = Vector2(0, -8.88889)
 scale = Vector2(0.5208334, 0.50347227)
 texture = ExtResource("4_ddoul")
 
-[node name="Arrow" type="Sprite2D" parent="." unique_id=88091443]
-scale = Vector2(0.5, 1)
-texture = ExtResource("3_ddoul")
-script = ExtResource("4_8g4oa")
-
 [node name="Movement collision" type="CollisionShape2D" parent="." unique_id=210919730]
 position = Vector2(0, -0.22222261)
 shape = SubResource("RectangleShape2D_q3lat")
 
-[node name="Arrow2" type="Sprite2D" parent="." unique_id=1666702658]
-texture = ExtResource("3_ddoul")
-script = ExtResource("4_8g4oa")
+[node name="Arrow" parent="." unique_id=948549401 node_paths=PackedStringArray("player") instance=ExtResource("3_tok1r")]
+player = NodePath("..")

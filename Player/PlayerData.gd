@@ -1,4 +1,4 @@
 class_name PlayerData extends Resource
 
-var player_id: int
-var device_id: int
+@export var player_id: int
+@export var device_id: int
