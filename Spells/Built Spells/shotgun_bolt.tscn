@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b2hdndehbd6a2"]
+
+[ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_n35xx"]
+[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_7gee7"]
+[ext_resource type="PackedScene" uid="uid://bv7i2dwugewt4" path="res://Spells/Spell Spawners/delay_death_spawner.tscn" id="3_5kfo5"]
+[ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="4_3fiua"]
+[ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="5_m3qsf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
+
+[node name="bolt_split" type="CharacterBody2D" unique_id=1082149160]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_n35xx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_7gee7")
+
+[node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]
+shape = SubResource("RectangleShape2D_mr5cl")
+disabled = true
+
+[node name="Delay Split" parent="." unique_id=1482470163 instance=ExtResource("3_5kfo5")]
+
+[node name="Spell Spawner" parent="Delay Split" unique_id=288123730 instance=ExtResource("4_3fiua")]
+
+[node name="Spell Spawner2" parent="Delay Split" unique_id=199202485 instance=ExtResource("4_3fiua")]
+position = Vector2(-1, -1)
+rotation = -0.23212878
+
+[node name="Spell Spawner3" parent="Delay Split" unique_id=953051773 instance=ExtResource("4_3fiua")]
+position = Vector2(0, -1)
+rotation = 0.2617994
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Spell Spawner4" parent="Delay Split" unique_id=157143352 instance=ExtResource("4_3fiua")]
+rotation = -0.116937056
+
+[node name="Spell Spawner5" parent="Delay Split" unique_id=1152307978 instance=ExtResource("4_3fiua")]
+rotation = 0.116937056
+
+[node name="Collison Spawner" parent="." unique_id=1953844848 instance=ExtResource("5_m3qsf")]
+
+[node name="Spell Spawner" parent="Collison Spawner" unique_id=8270730 instance=ExtResource("4_3fiua")]
+position = Vector2(-4, 0)
+rotation = 3.1415925

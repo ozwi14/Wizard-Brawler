@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://qi58sa5lb4e0"]
 
 [ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="1_ddoul"]
-[ext_resource type="PackedScene" uid="uid://cb8ybmc6suwja" path="res://Spells/Built Spells/basic_bolt.tscn" id="2_vlldt"]
-[ext_resource type="PackedScene" uid="uid://cekel8ufksyw8" path="res://Spells/Spell Archetypes/basic_lob.tscn" id="3_j23h2"]
+[ext_resource type="PackedScene" uid="uid://b2hdndehbd6a2" path="res://Spells/Built Spells/shotgun_bolt.tscn" id="2_vlldt"]
 [ext_resource type="PackedScene" uid="uid://ctq3ipqco3k2c" path="res://Player/Arrow.tscn" id="3_tok1r"]
 [ext_resource type="PackedScene" uid="uid://ceb4uj7hvvbih" path="res://Spells/Built Spells/potion_split.tscn" id="3_vlldt"]
 [ext_resource type="PackedScene" uid="uid://blv6qitsqxrxm" path="res://Spells/Spell Archetypes/spell_pulse.tscn" id="4_0j2ni"]
@@ -19,8 +18,8 @@ z_index = 10
 scale = Vector2(0.2, 0.45)
 collision_layer = 2
 script = ExtResource("1_ddoul")
-spell_array = Array[PackedScene]([ExtResource("2_vlldt"), ExtResource("3_j23h2"), ExtResource("2_vlldt")])
-spell_x_chain = Array[PackedScene]([ExtResource("4_0j2ni"), ExtResource("3_vlldt")])
+spell_array = Array[PackedScene]([ExtResource("2_vlldt"), ExtResource("2_vlldt"), ExtResource("2_vlldt")])
+spell_x_chain = Array[PackedScene]([ExtResource("3_vlldt"), ExtResource("3_vlldt")])
 spell_y_chain = Array[PackedScene]([ExtResource("3_vlldt")])
 spell_b_chain = Array[PackedScene]([ExtResource("3_vlldt")])
 

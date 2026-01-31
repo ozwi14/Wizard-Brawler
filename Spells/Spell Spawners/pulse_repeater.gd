@@ -12,6 +12,8 @@ func _ready() -> void:
 	for child in get_children():
 		if child is spell_spawner:
 			spell_spawners.append(child)
+	var parent = get_parent()
+	player_id = parent.player_id
 	timer = Timer.new()
 	timer.wait_time = timer_time
 	timer.one_shot = false
