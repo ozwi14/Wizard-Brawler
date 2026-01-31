@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_b8a8k"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_ixwvm"]
+[ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="3_rr4it"]
+[ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="4_d13tb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -23,5 +25,11 @@ shape = SubResource("RectangleShape2D_mr5cl")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
 process_material = SubResource("ParticleProcessMaterial_poaw0")
+
+[node name="Collison Spawner" parent="." unique_id=288123730 instance=ExtResource("3_rr4it")]
+
+[node name="Spell Spawner" parent="Collison Spawner" unique_id=1323723097 instance=ExtResource("4_d13tb")]
+position = Vector2(-3, 0)
+rotation = -3.132866
 
 [connection signal="child_entered_tree" from="Wall Collider" to="Wall Collider" method="_on_child_entered_tree"]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://brblx6nd8fmct"]
+
+[ext_resource type="Script" uid="uid://xe6tyebpwbi0" path="res://Spells/Spell Spawners/collision_spawner.gd" id="1_u48co"]
+[ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="2_52tpr"]
+
+[node name="Collison Spawner" type="Node2D" unique_id=288123730]
+script = ExtResource("1_u48co")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1024636556]
+position = Vector2(41, 0)

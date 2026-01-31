@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bcjqkop1asjwk" path="res://Spells/Spell Code/spell_lob.gd" id="1_t2aj0"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_fcq60"]
+[ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="3_df4yd"]
+[ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="4_n4bau"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -11,6 +13,7 @@ gravity = Vector3(0, 98, 0)
 
 [node name="spell_lob" type="CharacterBody2D" unique_id=1082149160]
 collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_t2aj0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
@@ -22,3 +25,9 @@ shape = SubResource("RectangleShape2D_mr5cl")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
 process_material = SubResource("ParticleProcessMaterial_poaw0")
+
+[node name="Collison Spawner" parent="." unique_id=288123730 instance=ExtResource("3_df4yd")]
+
+[node name="Spell Spawner" parent="Collison Spawner" unique_id=782753918 instance=ExtResource("4_n4bau")]
+position = Vector2(-2, 0)
+rotation = -3.1415927
