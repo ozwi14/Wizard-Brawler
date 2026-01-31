@@ -2679,17 +2679,13 @@ normal = Vector2(0, 1)
 normal = Vector2(1, 0)
 
 [node name="HamtasticTestLevel" type="Node2D" unique_id=894939379]
+scale = Vector2(0.9572301, 0.98987913)
 script = ExtResource("1_foulw")
 
 [node name="Player" parent="." unique_id=2116911412 instance=ExtResource("1_2nk32")]
-position = Vector2(870, 196)
+position = Vector2(1486.5809, 353.57852)
+scale = Vector2(0.2, 0.35)
 script = ExtResource("2_dgde2")
-GROUND_ACC = 200
-AIR_ACC = 25
-AIR_FRICTION = 10
-GROUND_FRICTION = 70
-MAX_WALKSPEED = 600
-JUMP_VELOCITY = 1000
 
 [node name="Player2" parent="." unique_id=1963970088 instance=ExtResource("3_dgde2")]
 position = Vector2(1113, 211)

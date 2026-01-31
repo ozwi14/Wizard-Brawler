@@ -74,18 +74,19 @@ func _physics_process(delta: float) -> void:
 	var horizontal_velocity = Vector2(velocity.x,0)
 	if horizontal_velocity.length() >0 :
 		velocity.x = move_toward(velocity.x,0,CUR_FRICTION)
+		
 	
 	#Determing the direction the player is intending to travle and fire
 	FIRE_ANGLE = Vector2(Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")*1000)
 	#print(FIRE_ANGLE)
 	
 	move_and_slide()
-	queue_redraw()
+	#queue_redraw()
 	
 	
 	
 	
 #func _draw():
-	draw_line(Vector2(0,0),FIRE_ANGLE,line_color,line_thickness)
+	#draw_line(Vector2(0,0),FIRE_ANGLE,line_color,line_thickness)
 	
 	

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Wizard Brawler"
-run/main_scene="uid://d15yqprgw575i"
+run/main_scene="uid://dt6xiqj7cgary"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
