@@ -12,7 +12,8 @@ class_name Player extends CharacterBody2D
 var _jumps_remaining : int
 
 @export var spell_array : Array[PackedScene] = []
-@onready var player_spell_spawner = $"Arrow/Test Spell Spawner"
+@onready var player_spell_spawner = $"Arrow/Player Spell Spawner"
+@export var direction : Vector2 = Vector2.RIGHT
 
 var FIRE_ANGLE : Vector2
 var end_pos : Vector2 = Vector2(150, 150)
@@ -71,33 +72,37 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	#Do jump
+	var input_direction : Vector2
+	input_direction = _player_get_movement_input()
+	
+	direction_last_pointed = input_direction
+	
 	_player_jump()
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_X):
 		if not was_x_pressed:
 			was_x_pressed = true
-			player_spell_spawner.spawn_children(spell_array[0])
+			if input_direction != Vector2(0,0):
+				player_spell_spawner.spawn_children(spell_array[0],input_direction)
 	else:
 		was_x_pressed = false
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_B):
 		if not was_b_pressed:
 			was_b_pressed = true
-			player_spell_spawner.spawn_children(spell_array[1])
+			if input_direction != Vector2(0,0):
+				player_spell_spawner.spawn_children(spell_array[1],input_direction)
 	else:
 		was_b_pressed = false
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_Y):
 		if not was_y_pressed:
 			was_y_pressed = true
-			player_spell_spawner.spawn_children(spell_array[2])
+			if input_direction != Vector2(0,0):
+				player_spell_spawner.spawn_children(spell_array[2],input_direction)
 	else:
 		was_y_pressed = false
 	
 	#get player inputs
-	var input_direction : Vector2
 	var CUR_FRICTION = GROUND_FRICTION
 	var CUR_ACC = GROUND_ACC
-	input_direction = _player_get_movement_input()
-	
-	direction_last_pointed = input_direction
 	
 	#try to move horizontally based on if you are flying or on ground
 	if input_direction : 

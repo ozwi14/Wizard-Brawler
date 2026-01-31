@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3fssig5r8xou"]
 
-[ext_resource type="Script" uid="uid://cow4xabcjlkdj" path="res://Spells/Spell Spawners/test_spell_spawner.gd" id="1_ct5mq"]
+[ext_resource type="Script" uid="uid://cow4xabcjlkdj" path="res://Spells/Spell Debug spawners/test_spell_spawner.gd" id="1_ct5mq"]
 [ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="2_ykck8"]
 
 [node name="Test Spell Spawner" type="Node2D" unique_id=288123730]
