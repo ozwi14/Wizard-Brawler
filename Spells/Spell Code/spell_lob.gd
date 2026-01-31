@@ -1,7 +1,7 @@
 class_name spell_lob extends CharacterBody2D
 
 var direction : Vector2
-const SPEED = 2400
+const SPEED = 1000
 
 
 #func _init(dir : Vector2) -> void:

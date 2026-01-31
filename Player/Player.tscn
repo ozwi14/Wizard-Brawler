@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://qi58sa5lb4e0"]
 
 [ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="1_ddoul"]
-[ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Archetypes/spell_lob.tscn" id="2_6ysni"]
-[ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="2_s1rgi"]
+[ext_resource type="PackedScene" uid="uid://ceb4uj7hvvbih" path="res://Spells/Built Spells/potion_split.tscn" id="3_s1rgi"]
 [ext_resource type="PackedScene" uid="uid://ctq3ipqco3k2c" path="res://Player/Arrow.tscn" id="3_tok1r"]
 [ext_resource type="Texture2D" uid="uid://cchs2qra8182y" path="res://Art/Temp art/Base_Wizard.png" id="4_ddoul"]
+[ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="4_j23h2"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="6_6ysni"]
+[ext_resource type="PackedScene" uid="uid://cjqjhqyjtbcfj" path="res://Spells/Built Spells/bolt_split.tscn" id="6_p7tob"]
 [ext_resource type="PackedScene" uid="uid://06powvntbqde" path="res://Components/GetPlayerDirection.tscn" id="7_vlldt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
@@ -17,7 +18,7 @@ z_index = 10
 scale = Vector2(0.45, 0.45)
 collision_layer = 2
 script = ExtResource("1_ddoul")
-spell_array = Array[PackedScene]([ExtResource("2_s1rgi"), ExtResource("2_6ysni"), ExtResource("2_6ysni")])
+spell_array = Array[PackedScene]([ExtResource("6_p7tob"), ExtResource("3_s1rgi"), ExtResource("4_j23h2")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055726692]
 position = Vector2(0, -8.88889)
@@ -35,7 +36,7 @@ shape = SubResource("RectangleShape2D_q3lat")
 [node name="Arrow" parent="." unique_id=948549401 node_paths=PackedStringArray("direction_component") instance=ExtResource("3_tok1r")]
 direction_component = NodePath("../GetPlayerDirection")
 
-[node name="Test Spell Spawner" parent="Arrow" unique_id=288123730 instance=ExtResource("6_6ysni")]
+[node name="Player Spell Spawner" parent="Arrow" unique_id=288123730 instance=ExtResource("6_6ysni")]
 
 [node name="GetPlayerDirection" parent="." unique_id=1387782851 node_paths=PackedStringArray("player") instance=ExtResource("7_vlldt")]
 player = NodePath("..")

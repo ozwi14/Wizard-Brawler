@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d3fssig5r8xou" path="res://Spells/Spell Spawners/test_spell_spawner.tscn" id="1_386df"]
 [ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Archetypes/spell_lob.tscn" id="2_rpovx"]
 [ext_resource type="PackedScene" uid="uid://b6ptlfb6liq6v" path="res://Components/GetFixedDirection.tscn" id="3_ed856"]
+[ext_resource type="PackedScene" uid="uid://bkt58e6prudba" path="res://Spells/Built Spells/potion_split.tscn" id="3_mx66d"]
 
 [node name="Andrew test level" type="Node2D" unique_id=1359912899]
 
@@ -14,6 +15,7 @@ direction_component = NodePath("../GetFixedDirection")
 
 [node name="Test Spell Spawner" parent="." unique_id=288123730 node_paths=PackedStringArray("direction_component") instance=ExtResource("1_386df")]
 position = Vector2(153, 201)
+child_spell = ExtResource("3_mx66d")
 direction_component = NodePath("../GetFixedDirection")
 
 [node name="GetFixedDirection" parent="." unique_id=544035461 instance=ExtResource("3_ed856")]
