@@ -37,3 +37,9 @@ text = "Player "
 [node name="Player Action Request" type="Label" parent="VBoxContainer" unique_id=485157179]
 layout_mode = 2
 size_flags_horizontal = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" unique_id=163258795]
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 0.5
+step = 0.0
