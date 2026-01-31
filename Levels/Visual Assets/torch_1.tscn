@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dbrn8d5wmhgt0"]
+
+[ext_resource type="Texture2D" uid="uid://cliw4awtw5s4f" path="res://Art/Temp art/Tourch (1).png" id="1_hq8bh"]
+[ext_resource type="Script" uid="uid://raxg18u2r4c5" path="res://Levels/Visual Assets/torch_1.gd" id="2_c54i0"]
+
+[sub_resource type="Gradient" id="Gradient_i6gjl"]
+colors = PackedColorArray(0.8703704, 0.8703704, 0.8703704, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4iq5b"]
+gradient = SubResource("Gradient_i6gjl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="Torch 1" type="Sprite2D" unique_id=1254656703]
+texture = ExtResource("1_hq8bh")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=927788822]
+position = Vector2(0, -9.999999)
+scale = Vector2(-4.9102116, -4.9102116)
+color = Color(0.8056036, 0.4881776, 0.07065224, 1)
+energy = 1.16
+shadow_enabled = true
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_4iq5b")
+script = ExtResource("2_c54i0")
