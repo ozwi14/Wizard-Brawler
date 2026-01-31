@@ -24,12 +24,37 @@ var line_thickness : float = 30.0
 
 var direction_last_pointed : Vector2 = Vector2.RIGHT
 
+#staff Variables
+var staff_input_dir = PI/2
+var staff_angle = PI/2 #done in degrees
+
 func _ready() -> void:
 	print("Player %d exists", player_data.player_id)
 	print("Player at: ", position)
 	#set players controls
 	_jumps_remaining = max_jumps
 	pass
+
+#func _Staff_rotation() -> void:
+	#get contoller input If over deadzone 
+	#var deadzone = .2
+	#if Vector2(Input.get_joy_axis(player_data.device_id,JOY_AXIS_LEFT_X),
+		#Input.get_joy_axis(player_data.device_id,JOY_AXIS_LEFT_Y)).length() > deadzone:
+			#staff_input_dir = Vector2.ZERO.angle_to_point(Vector2(
+			#Input.get_joy_axis(player_data.device_id,JOY_AXIS_LEFT_X),
+			#Input.get_joy_axis(player_data.device_id,JOY_AXIS_LEFT_Y)))
+	#set staff angle
+	#staff_angle = staff_input_dir + PI/2
+	
+	#keep staff in left hand
+	#if staff_angle > 0 and staff_angle < PI :
+		#$Staff.flip_h = true
+		#$Staff.z_index = -1
+	#else:
+		#$Staff.flip_h = false
+		#$Staff.z_index = 1
+	#$Staff.rotation = staff_angle
+
 
 var holding_jump: bool = false
 
@@ -74,6 +99,8 @@ func _physics_process(delta: float) -> void:
 	#Do jump
 	var input_direction : Vector2
 	input_direction = _player_get_movement_input()
+	
+	#_Staff_rotation()
 	
 	direction_last_pointed = input_direction
 	

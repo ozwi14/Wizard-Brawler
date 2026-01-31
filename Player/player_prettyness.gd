@@ -5,6 +5,9 @@ var older_position = get_global_position().x
 var olderer_position = get_global_position().x
 var oldest_position = get_global_position().x
 
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#$AnimationPlayer.play("Idle")
@@ -23,10 +26,8 @@ func _animation_player(movement_speed: float) ->void:
 	elif abs(movement_speed)  > min_speed:
 		$AnimationPlayer.play("Forward")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
-	
-	 
-	#position = get_global_mouse_position()
 	_animation_player(oldest_position-get_global_position().x)
 	oldest_position = olderer_position
 	olderer_position = older_position

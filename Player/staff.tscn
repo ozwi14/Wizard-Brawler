@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b8uvxogwlvkf0"]
+
+[ext_resource type="Texture2D" uid="uid://b57lhjjd5ilus" path="res://Art/Temp art/Wizard Staffs/Staff.png" id="1_oar4l"]
+
+[sub_resource type="Gradient" id="Gradient_o8gga"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j23h2"]
+gradient = SubResource("Gradient_o8gga")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="Staff" type="Sprite2D" unique_id=218495681]
+rotation = 1.55125
+scale = Vector2(0.12848929, 0.18194601)
+texture = ExtResource("1_oar4l")
+offset = Vector2(119.464935, -277.75824)
+
+[node name="StaffTip" type="Node2D" parent="." unique_id=1745468279]
+position = Vector2(135.19739, -823.0564)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=806726506]
+position = Vector2(140.79239, -681.4277)
+scale = Vector2(36.612217, 36.76708)
+color = Color(0.62, 1, 0.96833324, 1)
+energy = 0.7
+texture = SubResource("GradientTexture2D_j23h2")

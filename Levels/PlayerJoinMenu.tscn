@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b78ch2jkg8fdp"]
 
 [ext_resource type="Script" uid="uid://bwhyodf7j7y3k" path="res://Levels/player_join_menu.gd" id="1_7csly"]
-[ext_resource type="PackedScene" uid="uid://dt6xiqj7cgary" path="res://Levels/Hamtastic test level.tscn" id="2_1b15p"]
+[ext_resource type="PackedScene" uid="uid://dt6xiqj7cgary" path="res://Levels/_Library_Level.tscn" id="2_1b15p"]
 [ext_resource type="PackedScene" uid="uid://d15yqprgw575i" path="res://Levels/UI/PlayerSelectionBox.tscn" id="2_cmtlr"]
 
 [node name="PlayerJoinMenu" type="Control" unique_id=223752700 node_paths=PackedStringArray("player_boxes")]
