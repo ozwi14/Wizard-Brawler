@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://drsnjufno0svl" path="res://Player/Player 2 FOR TESTING/player 2.gd" id="1_q3lat"]
 [ext_resource type="Texture2D" uid="uid://ltal2ggd6nat" path="res://Art/Temp art/arrow.png" id="3_ddoul"]
-[ext_resource type="Script" uid="uid://dbbne1ru83n3q" path="res://Player/Arrow.gd" id="4_8g4oa"]
-[ext_resource type="PackedScene" uid="uid://lw2rggchldx" path="res://Player/player_prettynessTEMP.tscn" id="5_8g4oa"]
+[ext_resource type="Script" uid="uid://dbbne1ru83n3q" path="res://Player/arrow.gd" id="4_8g4oa"]
+[ext_resource type="PackedScene" uid="uid://lw2rggchldx" path="res://Player/player_prettyness.tscn" id="5_8g4oa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
 size = Vector2(79.99999, 158.88887)

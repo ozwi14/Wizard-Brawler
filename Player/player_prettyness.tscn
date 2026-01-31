@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://lw2rggchldx"]
 
-[ext_resource type="Script" uid="uid://18egr324mm0l" path="res://Player/player_prettyness_temp.gd" id="1_1sbr7"]
-[ext_resource type="Texture2D" uid="uid://djnari0un2r4v" path="res://Art/Temp art/Legs_Base.png" id="2_gf54u"]
-[ext_resource type="Texture2D" uid="uid://t27uiwcbwjaf" path="res://Art/Temp art/Cloak_Base.png" id="3_4l6pc"]
-[ext_resource type="Texture2D" uid="uid://bnfaheynedf5h" path="res://Art/Temp art/Hood_base.png" id="4_sojkb"]
-[ext_resource type="Texture2D" uid="uid://co70c308wb5ra" path="res://Art/Temp art/Mask_Base.png" id="5_6qrey"]
+[ext_resource type="Script" uid="uid://18egr324mm0l" path="res://Player/player_prettyness.gd" id="1_eh30s"]
+[ext_resource type="Texture2D" uid="uid://djnari0un2r4v" path="res://Art/Temp art/Legs_Base.png" id="2_o8gga"]
+[ext_resource type="Texture2D" uid="uid://t27uiwcbwjaf" path="res://Art/Temp art/Cloak_Base.png" id="3_2y1in"]
+[ext_resource type="Texture2D" uid="uid://bnfaheynedf5h" path="res://Art/Temp art/Hood_base.png" id="4_jijfb"]
+[ext_resource type="Texture2D" uid="uid://co70c308wb5ra" path="res://Art/Temp art/Mask_Base.png" id="5_jgv31"]
 
 [sub_resource type="Animation" id="Animation_1sbr7"]
 resource_name = "Forward"
@@ -951,13 +951,13 @@ _data = {
 }
 
 [node name="Player prettyness" type="Node2D" unique_id=155942807]
-script = ExtResource("1_1sbr7")
+script = ExtResource("1_eh30s")
 
 [node name="Polygons" type="Node2D" parent="." unique_id=1461108777]
 position = Vector2(-64, -128)
 
 [node name="Legs" type="Polygon2D" parent="Polygons" unique_id=2038233151]
-texture = ExtResource("2_gf54u")
+texture = ExtResource("2_o8gga")
 skeleton = NodePath("../../PlayerSkeleton")
 polygon = PackedVector2Array(53.953796, 71.47094, 79.36383, 72.68094, 105.983826, 125.92096, 105.983826, 185.21098, 89.04382, 252.97101, 44.273804, 255.39102, 28.543762, 190.051, 30.963806, 125.92096)
 uv = PackedVector2Array(53.953796, 71.47094, 79.36383, 72.68094, 105.983826, 125.92096, 105.983826, 185.21098, 89.04382, 252.97101, 44.273804, 255.39102, 28.543762, 190.051, 30.963806, 125.92096)
@@ -965,7 +965,7 @@ bones = ["Body", PackedFloat32Array(1, 1, 1, 0.37, 0, 0, 0.37, 1), "Body/Head", 
 
 [node name="Cape" type="Polygon2D" parent="Polygons" unique_id=1706590388]
 z_index = 1
-texture = ExtResource("3_4l6pc")
+texture = ExtResource("3_2y1in")
 skeleton = NodePath("../../PlayerSkeleton")
 polygon = PackedVector2Array(41.90088, 76.410065, 64.214905, 76.410065, 84.8761, 74.75717, 106.36371, 109.46793, 117.10748, 148.31093, 131.1571, 192.93906, 106.36371, 216.906, 65.8678, 223.51758, 20.413269, 215.25311, -9.338867, 192.93906, 8.016541, 148.31093, 28.677734, 97.89768)
 uv = PackedVector2Array(41.90088, 76.410065, 64.214905, 76.410065, 84.8761, 74.75717, 106.36371, 109.46793, 117.10748, 148.31093, 131.1571, 192.93906, 106.36371, 216.906, 65.8678, 223.51758, 20.413269, 215.25311, -9.338867, 192.93906, 8.016541, 148.31093, 28.677734, 97.89768)
@@ -973,7 +973,7 @@ bones = ["Body", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Body/H
 
 [node name="Hood" type="Polygon2D" parent="Polygons" unique_id=1395751903]
 z_index = 2
-texture = ExtResource("4_sojkb")
+texture = ExtResource("4_jijfb")
 skeleton = NodePath("../../PlayerSkeleton")
 polygon = PackedVector2Array(62.500122, 92.70123, 25.685669, 76.92362, 24.934326, 50.627598, 46.722473, 20.575, 82.78558, 5.5487037, 106.076355, 37.855244, 111.33557, 62.648632, 83.53693, 92.70123)
 uv = PackedVector2Array(62.500122, 92.70123, 25.685669, 76.92362, 24.934326, 50.627598, 46.722473, 20.575, 82.78558, 5.5487037, 106.076355, 37.855244, 111.33557, 62.648632, 83.53693, 92.70123)
@@ -981,7 +981,7 @@ bones = ["Body", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "Body/Head", Packed
 
 [node name="Mask" type="Polygon2D" parent="Polygons" unique_id=2124275310]
 z_index = 3
-texture = ExtResource("5_6qrey")
+texture = ExtResource("5_jgv31")
 skeleton = NodePath("../../PlayerSkeleton")
 polygon = PackedVector2Array(72.79065, 10.119544, 100.589294, 22.891895, 108.85376, 59.70632, 96.08142, 87.50497, 72.03931, 98.77469, 46.49463, 79.99181, 40.48413, 49.939228, 47.997253, 21.389263)
 uv = PackedVector2Array(72.79065, 10.119544, 100.589294, 22.891895, 108.85376, 59.70632, 96.08142, 87.50497, 72.03931, 98.77469, 46.49463, 79.99181, 40.48413, 49.939228, 47.997253, 21.389263)
@@ -1003,13 +1003,13 @@ rest = Transform2D(0.894948, -3.9873614, 0.29493454, 0.066196926, 4, -59.000008)
 [node name="Legs" type="Bone2D" parent="PlayerSkeleton/Body" unique_id=1083263246]
 position = Vector2(3, 2)
 rotation = 1.5685453
-scale = Vector2(6.1257186, 3.1172476)
+scale = Vector2(6.1257186, 3.1172478)
 rest = Transform2D(0.013788891, 6.125703, -3.1172397, 0.007016873, 3, 2)
 
 [node name="CapeL" type="Bone2D" parent="PlayerSkeleton/Body" unique_id=1477293916]
 position = Vector2(0, -54)
 rotation = 1.9501356
-scale = Vector2(3.6321964, 3.6078455)
+scale = Vector2(3.6321964, 3.6078458)
 rest = Transform2D(-1.345027, 3.3739817, -3.351362, -1.3360096, 0, -54)
 
 [node name="CapeL2" type="Bone2D" parent="PlayerSkeleton/Body/CapeL" unique_id=1492442429]
@@ -1024,7 +1024,7 @@ rest = Transform2D(1, 0, 0, 1, 12, -53)
 [node name="CapeR2" type="Bone2D" parent="PlayerSkeleton/Body/CapeR" unique_id=1742894092]
 position = Vector2(15, 54)
 rotation = 0.95318127
-scale = Vector2(3.7248144, 0.88167113)
+scale = Vector2(3.7248137, 0.88167113)
 rest = Transform2D(2.157012, 3.0366993, -0.71879286, 0.5105691, 15, 54)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=929501994]
