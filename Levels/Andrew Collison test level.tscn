@@ -1,8 +1,8 @@
-[gd_scene format=4 uid="uid://dtrc2iuljoxpt"]
+[gd_scene format=4 uid="uid://b2ygysseoha0o"]
 
 [ext_resource type="Script" uid="uid://dbtlbkpgs2lqj" path="res://Levels/hamtastic_test_level.gd" id="1_h8gys"]
 [ext_resource type="PackedScene" uid="uid://qi58sa5lb4e0" path="res://Player/Player.tscn" id="2_nb7qc"]
-[ext_resource type="PackedScene" uid="uid://bh3lbkglpuowl" path="res://Levels/PlayerSpawner.tscn" id="3_b0r3j"]
+[ext_resource type="PackedScene" path="res://Levels/PlayerSpawner.tscn" id="3_b0r3j"]
 [ext_resource type="Texture2D" uid="uid://dgbjxj2bgegl1" path="res://Art/Temp art/build_atlas.png" id="5_6o7y2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_foulw"]
@@ -2677,7 +2677,7 @@ normal = Vector2(0, 1)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8fcuh"]
 normal = Vector2(1, 0)
 
-[node name="HamtasticTestLevel" type="Node2D" unique_id=894939379]
+[node name="Andrew Collison test level" type="Node2D" unique_id=894939379]
 script = ExtResource("1_h8gys")
 
 [node name="Permiable Floors" type="TileMapLayer" parent="." unique_id=537550522]

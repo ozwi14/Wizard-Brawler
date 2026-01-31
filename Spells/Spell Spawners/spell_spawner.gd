@@ -1,4 +1,4 @@
-extends Node2D
+class_name Spell_spawner extends Node2D
 
 @export var child_spell : PackedScene
 @export var direction : Vector2 = Vector2.RIGHT
@@ -8,21 +8,17 @@ func _ready() -> void:
 	#call_deferred("spawn_children")
 	
 	
-func spawn_children(child_spell: PackedScene):
-	if Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down") != Vector2(0,0):
-		var dir = Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")
-		if child_spell == null or dir == Vector2(0,0):
-			return
-		direction = dir
-	
+func spawn_children(child_spell: PackedScene,dir : Vector2):
 	var subspell = child_spell.instantiate()
-	
-	subspell.direction = direction
+	subspell.direction = dir
 	subspell.global_position = global_position
 	subspell.top_level = true
+	
+	get_tree().current_scene.add_child(subspell)
+	
 	#subspell.global_rotation = global_rotation
 	
-	get_parent().add_child(subspell)
+	#get_parent().add_child(subspell)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
