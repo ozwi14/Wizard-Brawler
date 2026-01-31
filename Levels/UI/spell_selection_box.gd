@@ -10,12 +10,21 @@ var current_layer_selected : int = 0
 
 @onready var top_color_rect: ColorRect = $"VBoxContainer/Top Mask Box/Middle Image/ColorRect"
 @onready var top_texture_rect: TextureRect = $"VBoxContainer/Top Mask Box/Middle Image/ColorRect/TextureRect"
+@onready var top_label: Label = $"VBoxContainer/Top Mask Box/Middle Image/ColorRect/Label"
 
 @onready var middle_color_rect: ColorRect = $"VBoxContainer/Middle Mask Box/Middle Image/ColorRect"
 @onready var middle_texture_rect: TextureRect = $"VBoxContainer/Middle Mask Box/Middle Image/ColorRect/TextureRect"
+@onready var middle_label: Label = $"VBoxContainer/Middle Mask Box/Middle Image/ColorRect/Label"
 
 @onready var bottom_color_rect: ColorRect = $"VBoxContainer/Bottom Mask Box/Middle Image/ColorRect"
 @onready var bottom_texture_rect: TextureRect = $"VBoxContainer/Bottom Mask Box/Middle Image/ColorRect/TextureRect"
+@onready var bottom_label: Label = $"VBoxContainer/Bottom Mask Box/Middle Image/ColorRect/Label"
+
+func get_spells() -> Array[SpellItemData]:
+	var spell_x : SpellItemData = possible_spells[index_top].spell_data
+	var spell_y : SpellItemData = possible_spells[index_middle].spell_data
+	var spell_b : SpellItemData = possible_spells[index_bottom].spell_data
+	return [spell_x, spell_y, spell_b]
 
 func move_left() -> void:
 	var index : int = 0
@@ -121,13 +130,16 @@ func update_image():
 		middle_color_rect.color.a = 0
 		bottom_color_rect.color.a = 0
 		top_texture_rect.texture = selected_spell.spell_data.icon
+		top_label.text = selected_spell.spell_data.name
 	elif current_layer_selected == 1:
 		top_color_rect.color.a = 0
 		middle_color_rect.color.a = 1
 		bottom_color_rect.color.a = 0
 		middle_texture_rect.texture = selected_spell.spell_data.icon
+		middle_label.text = selected_spell.spell_data.name
 	elif current_layer_selected == 2:
 		top_color_rect.color.a = 0
 		middle_color_rect.color.a = 0
 		bottom_color_rect.color.a = 1
 		bottom_texture_rect.texture = selected_spell.spell_data.icon
+		bottom_label.text = selected_spell.spell_data.name

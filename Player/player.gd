@@ -11,7 +11,6 @@ class_name Player extends CharacterBody2D
 
 var _jumps_remaining : int
 
-@export var spell_array : Array[PackedScene] = []
 @onready var player_spell_spawner = $"Arrow/Player Spell Spawner"
 @export var direction : Vector2 = Vector2.RIGHT
 
@@ -27,6 +26,7 @@ var direction_last_pointed : Vector2 = Vector2.RIGHT
 func _ready() -> void:
 	print("Player %d exists", player_data.player_id)
 	print("Player at: ", position)
+	assert(player_data.spells.size() == 3)
 	#set players controls
 	_jumps_remaining = max_jumps
 	pass
@@ -78,7 +78,7 @@ func _physics_process(delta: float) -> void:
 			was_x_pressed = true
 			if Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down") != Vector2(0,0):
 				var dir = Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")
-				player_spell_spawner.spawn_children(spell_array[0],dir)
+				player_spell_spawner.spawn_children(player_data.spells[0],dir)
 	else:
 		was_x_pressed = false
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_B):
@@ -86,7 +86,7 @@ func _physics_process(delta: float) -> void:
 			was_b_pressed = true
 			if Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down") != Vector2(0,0):
 				var dir = Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")
-				player_spell_spawner.spawn_children(spell_array[1],dir)
+				player_spell_spawner.spawn_children(player_data.spells[1],dir)
 	else:
 		was_b_pressed = false
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_Y):
@@ -94,7 +94,7 @@ func _physics_process(delta: float) -> void:
 			was_y_pressed = true
 			if Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down") != Vector2(0,0):
 				var dir = Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")
-				player_spell_spawner.spawn_children(spell_array[2],dir)
+				player_spell_spawner.spawn_children(player_data.spells[2],dir)
 	else:
 		was_y_pressed = false
 	

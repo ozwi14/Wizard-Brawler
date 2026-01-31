@@ -4,6 +4,15 @@
 
 [sub_resource type="ImageTexture" id="ImageTexture_sdnrq"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_sdnrq"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3bkdw"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_al67u"]
+font_color = Color(0, 0, 0, 1)
+
 [node name="SpellSelectionBox" type="Control" unique_id=1594973397]
 layout_mode = 3
 anchors_preset = 15
@@ -52,6 +61,17 @@ grow_vertical = 2
 size_flags_vertical = 3
 texture = SubResource("ImageTexture_sdnrq")
 
+[node name="Label" type="Label" parent="VBoxContainer/Top Mask Box/Middle Image/ColorRect" unique_id=960884252]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -0.5
+offset_right = 0.5
+offset_bottom = 23.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_sdnrq")
+
 [node name="Right Arrow" type="VBoxContainer" parent="VBoxContainer/Top Mask Box" unique_id=679417426]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -91,6 +111,17 @@ grow_vertical = 2
 size_flags_vertical = 3
 texture = SubResource("ImageTexture_sdnrq")
 
+[node name="Label" type="Label" parent="VBoxContainer/Middle Mask Box/Middle Image/ColorRect" unique_id=1528120095]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -0.5
+offset_right = 0.5
+offset_bottom = 23.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_3bkdw")
+
 [node name="Right Arrow" type="VBoxContainer" parent="VBoxContainer/Middle Mask Box" unique_id=28826573]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -129,6 +160,17 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 texture = SubResource("ImageTexture_sdnrq")
+
+[node name="Label" type="Label" parent="VBoxContainer/Bottom Mask Box/Middle Image/ColorRect" unique_id=704173701]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -0.5
+offset_right = 0.5
+offset_bottom = 23.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_al67u")
 
 [node name="Right Arrow" type="VBoxContainer" parent="VBoxContainer/Bottom Mask Box" unique_id=1796600480]
 layout_mode = 2

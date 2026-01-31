@@ -55,12 +55,15 @@ func _on_player_ready() -> void:
 	print("Players Joined ", players_joined)
 	print("Players Ready  ", players_ready)
 	
+	GameManager.players.clear()
+	
 	if players_ready == players_joined and players_ready >= 2:
 		for player_box in player_boxes:
 			if player_box.player_state == PlayerSelectionBox.PlayerSelectionState.PlayerReady:
 				var player: PlayerData = PlayerData.new()
 				player.player_id = player_box.player_id
 				player.device_id = player_box.device_id
+				player.spells = player_box.get_player_spells()
 				
 				GameManager.add_players(player)
 		

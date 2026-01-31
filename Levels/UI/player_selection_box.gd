@@ -17,6 +17,9 @@ enum PlayerSelectionState {
 
 var ready_time_held : float = 0.0
 
+func get_player_spells() -> Array[SpellItemData]:
+	return spell_selection_box.get_spells()
+
 func _ready() -> void:
 	spell_selection_box.visible = false
 
