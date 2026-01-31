@@ -1,7 +1,7 @@
 class_name PlayerSpawner extends Node2D
 
 @export var spawn_points: Array[Node2D]
-@export var player_scene: PackedScene
+@export var player_scene: PackedScene 
 
 @export var debug_spawn_players : bool = false
 
@@ -10,6 +10,7 @@ func _ready() -> void:
 	if debug_spawn_players:
 		return
 	assert(spawn_points.size() >= GameManager.players.size())
+	assert(player_scene != null)
 	pass # Replace with function body.
 
 func spawn_players() -> void:
@@ -28,7 +29,7 @@ func spawn_players() -> void:
 	
 	var index = 0
 	for player_data in GameManager.players:
-		var player: Player = player_scene.instantiate()
+		var player = player_scene.instantiate()
 		player.player_data = player_data
 		player.position = spawn_points[index].position
 		get_tree().current_scene.add_child(player)

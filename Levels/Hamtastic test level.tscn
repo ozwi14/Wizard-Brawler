@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dt6xiqj7cgary"]
 
-[ext_resource type="PackedScene" uid="uid://btj24jthmcl8p" path="res://Player/Player.tscn" id="1_2nk32"]
 [ext_resource type="Script" uid="uid://dbtlbkpgs2lqj" path="res://Levels/hamtastic_test_level.gd" id="1_foulw"]
 [ext_resource type="Texture2D" uid="uid://dgbjxj2bgegl1" path="res://Art/Temp art/build_atlas.png" id="2_py3g0"]
+[ext_resource type="PackedScene" uid="uid://qi58sa5lb4e0" path="res://Player/Player.tscn" id="4_dgde2"]
 [ext_resource type="PackedScene" uid="uid://bh3lbkglpuowl" path="res://Levels/PlayerSpawner.tscn" id="5_foulw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8fcuh"]
@@ -2721,8 +2721,7 @@ shape = SubResource("WorldBoundaryShape2D_8fcuh")
 
 [node name="PlayerSpawner" parent="." unique_id=1756713677 node_paths=PackedStringArray("spawn_points") instance=ExtResource("5_foulw")]
 spawn_points = [NodePath("Spawn Point 1"), NodePath("Spawn Point 2"), NodePath("Spawn Point 3"), NodePath("Spawn Point 4")]
-player_scene = ExtResource("1_2nk32")
-debug_spawn_players = true
+player_scene = ExtResource("4_dgde2")
 
 [node name="Spawn Point 1" type="Node2D" parent="PlayerSpawner" unique_id=1711605410]
 position = Vector2(173, 407)
