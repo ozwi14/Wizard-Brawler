@@ -8,22 +8,18 @@
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="6_6ysni"]
 [ext_resource type="PackedScene" uid="uid://cjqjhqyjtbcfj" path="res://Spells/Built Spells/bolt_split.tscn" id="6_p7tob"]
 [ext_resource type="PackedScene" uid="uid://06powvntbqde" path="res://Components/GetPlayerDirection.tscn" id="7_vlldt"]
+[ext_resource type="PackedScene" uid="uid://lw2rggchldx" path="res://Player/player_prettyness.tscn" id="7_s1rgi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
-size = Vector2(64, 128.44446)
+size = Vector2(150, 158.88887)
 
 [node name="Player" type="CharacterBody2D" unique_id=1963970088]
 modulate = Color(1, 0, 0, 1)
 z_index = 10
-scale = Vector2(0.45, 0.45)
+scale = Vector2(0.2, 0.45)
 collision_layer = 2
 script = ExtResource("1_ddoul")
 spell_array = Array[PackedScene]([ExtResource("6_p7tob"), ExtResource("3_s1rgi"), ExtResource("4_j23h2")])
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055726692]
-position = Vector2(0, -8.88889)
-scale = Vector2(0.5208334, 0.50347227)
-texture = ExtResource("4_ddoul")
 
 [node name="Movement collision" type="CollisionShape2D" parent="." unique_id=210919730]
 position = Vector2(0, -0.22222261)
@@ -40,3 +36,6 @@ direction_component = NodePath("../GetPlayerDirection")
 
 [node name="GetPlayerDirection" parent="." unique_id=1387782851 node_paths=PackedStringArray("player") instance=ExtResource("7_vlldt")]
 player = NodePath("..")
+
+[node name="Player prettyness" parent="." unique_id=155942807 instance=ExtResource("7_s1rgi")]
+scale = Vector2(0.5, 0.5)

@@ -2678,6 +2678,7 @@ normal = Vector2(0, 1)
 normal = Vector2(1, 0)
 
 [node name="HamtasticTestLevel" type="Node2D" unique_id=894939379]
+scale = Vector2(0.9572301, 0.98987913)
 script = ExtResource("1_foulw")
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=1878266722]
