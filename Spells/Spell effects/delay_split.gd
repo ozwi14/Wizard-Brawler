@@ -2,7 +2,7 @@ extends Node2D
 @export var child_spell : PackedScene
 var direction : Vector2
 
-@export var timer : Timer = 
+@export var timer : Timer
 @export var spell_spawners : Array[Spell_spawner] = []
 
 # Called when the node enters the scene tree for the first time.
