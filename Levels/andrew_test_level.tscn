@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dbta6xnougorm"]
 
-[ext_resource type="PackedScene" uid="uid://d3fssig5r8xou" path="res://Spells/Spell Spawners/test_spell_spawner.tscn" id="1_386df"]
+[ext_resource type="PackedScene" uid="uid://d3fssig5r8xou" path="res://Spells/Spell Debug spawners/test_spell_spawner.tscn" id="1_386df"]
 [ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Archetypes/spell_lob.tscn" id="2_rpovx"]
 [ext_resource type="PackedScene" uid="uid://b6ptlfb6liq6v" path="res://Components/GetFixedDirection.tscn" id="3_ed856"]
-[ext_resource type="PackedScene" uid="uid://bkt58e6prudba" path="res://Spells/Built Spells/potion_split.tscn" id="3_mx66d"]
+[ext_resource type="PackedScene" uid="uid://ceb4uj7hvvbih" path="res://Spells/Built Spells/potion_split.tscn" id="3_mx66d"]
 
 [node name="Andrew test level" type="Node2D" unique_id=1359912899]
 

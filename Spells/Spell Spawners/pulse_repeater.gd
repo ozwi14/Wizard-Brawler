@@ -1,12 +1,18 @@
 extends Node2D
 @export var child_spell : PackedScene
 var direction : Vector2
-
-@export var timer : Timer
+@export var timer_time := 0.5  # editable in Inspector
+var timer : Timer
 @export var spell_spawners : Array[Spell_spawner] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	timer = Timer.new()
+	timer.wait_time = timer_time
+	timer.one_shot = false
+	timer.timeout.connect(_on_timer_timeout)
+	add_child(timer)
+	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
 	pass # Replace with function body.
 
@@ -21,4 +27,4 @@ func _on_timer_timeout() -> void:
 		for i in spell_spawners:
 			var dir = i.global_transform.x
 			i.spawn_children(child_spell,dir)
-	get_parent().queue_free()
+	
