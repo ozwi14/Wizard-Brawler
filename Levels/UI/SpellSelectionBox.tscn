@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://crfsbhlg72xxc"]
+
+[ext_resource type="Script" uid="uid://dbgo8ijdrqhr3" path="res://Levels/UI/spell_selection_box.gd" id="1_sdnrq"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_sdnrq"]
+
+[node name="SpellSelectionBox" type="Control" unique_id=1594973397]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sdnrq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=60070258]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top Mask Box" type="HBoxContainer" parent="VBoxContainer" unique_id=703048206]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Left Arrow" type="VBoxContainer" parent="VBoxContainer/Top Mask Box" unique_id=1692579449]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Top Mask Box/Left Arrow" unique_id=901361390]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Middle Image" type="VBoxContainer" parent="VBoxContainer/Top Mask Box" unique_id=616150304]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Top Mask Box/Middle Image" unique_id=1085077857]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.7254902, 0.8352941, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Top Mask Box/Middle Image/ColorRect" unique_id=1461991071]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = SubResource("ImageTexture_sdnrq")
+
+[node name="Right Arrow" type="VBoxContainer" parent="VBoxContainer/Top Mask Box" unique_id=679417426]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Top Mask Box/Right Arrow" unique_id=705522801]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Middle Mask Box" type="HBoxContainer" parent="VBoxContainer" unique_id=92874692]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Left Arrow" type="VBoxContainer" parent="VBoxContainer/Middle Mask Box" unique_id=1471140843]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Middle Mask Box/Left Arrow" unique_id=719844287]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Middle Image" type="VBoxContainer" parent="VBoxContainer/Middle Mask Box" unique_id=1304718313]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Middle Mask Box/Middle Image" unique_id=1838076589]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.7254902, 0.8352941, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Middle Mask Box/Middle Image/ColorRect" unique_id=1517948725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = SubResource("ImageTexture_sdnrq")
+
+[node name="Right Arrow" type="VBoxContainer" parent="VBoxContainer/Middle Mask Box" unique_id=28826573]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Middle Mask Box/Right Arrow" unique_id=1899544160]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Bottom Mask Box" type="HBoxContainer" parent="VBoxContainer" unique_id=1857427202]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Left Arrow" type="VBoxContainer" parent="VBoxContainer/Bottom Mask Box" unique_id=987919462]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Bottom Mask Box/Left Arrow" unique_id=578350261]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Middle Image" type="VBoxContainer" parent="VBoxContainer/Bottom Mask Box" unique_id=993004847]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Bottom Mask Box/Middle Image" unique_id=303929302]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.7254902, 0.8352941, 1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Bottom Mask Box/Middle Image/ColorRect" unique_id=1670685818]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = SubResource("ImageTexture_sdnrq")
+
+[node name="Right Arrow" type="VBoxContainer" parent="VBoxContainer/Bottom Mask Box" unique_id=1796600480]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Bottom Mask Box/Right Arrow" unique_id=1943507411]
+layout_mode = 2
+size_flags_vertical = 3

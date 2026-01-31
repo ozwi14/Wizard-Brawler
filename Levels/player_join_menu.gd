@@ -6,7 +6,8 @@ extends Control
 @export var player_boxes: Array[PlayerSelectionBox]
 
 @export var next_level : PackedScene
-
+@export var possible_spells_core : Array[SpellItemData]
+var possible_spells : Array[SpellSelectionDataWrapper]
 
 var players_joined: int = 0
 var players_ready: int = 0
@@ -24,6 +25,15 @@ func _ready() -> void:
 		player_box.SetPlayerId(player_number)
 		pass
 	pass
+	
+	for item in possible_spells_core:
+		var wrapper := SpellSelectionDataWrapper.new()
+		wrapper.selected = false
+		wrapper.spell_data = item
+		possible_spells.append(wrapper)
+	
+	if GameManager.possible_spells.size() == 0:
+		GameManager.possible_spells = possible_spells.duplicate(true)
 
 func _on_device_linked() -> void:
 	players_joined += 1

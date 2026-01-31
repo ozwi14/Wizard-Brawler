@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpellItemData" format=3 uid="uid://cerkdmvdxs8dl"]
+
+[ext_resource type="Texture2D" uid="uid://t27uiwcbwjaf" path="res://Art/Temp art/Cloak_Base.png" id="1_2e7fr"]
+[ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Archetypes/spell_lob.tscn" id="1_2oulo"]
+[ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="1_wkkvi"]
+
+[resource]
+script = ExtResource("1_wkkvi")
+name = "Lob"
+icon = ExtResource("1_2e7fr")
+scene = ExtResource("1_2oulo")
+metadata/_custom_type_script = "uid://4u87srhdthks"

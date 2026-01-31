@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpellItemData" format=3 uid="uid://fk0aytuupniy"]
+
+[ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="1_5fa7y"]
+[ext_resource type="Texture2D" uid="uid://ltal2ggd6nat" path="res://Art/Temp art/arrow.png" id="1_bldw3"]
+[ext_resource type="PackedScene" uid="uid://vv5srqd8f0lb" path="res://Spells/Spell Archetypes/spell_totem.tscn" id="1_piksv"]
+
+[resource]
+script = ExtResource("1_5fa7y")
+name = "Totem"
+icon = ExtResource("1_bldw3")
+scene = ExtResource("1_piksv")
+metadata/_custom_type_script = "uid://4u87srhdthks"

@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://bwhyodf7j7y3k" path="res://Levels/player_join_menu.gd" id="1_7csly"]
 [ext_resource type="PackedScene" uid="uid://dt6xiqj7cgary" path="res://Levels/Hamtastic test level.tscn" id="2_1b15p"]
 [ext_resource type="PackedScene" uid="uid://d15yqprgw575i" path="res://Levels/UI/PlayerSelectionBox.tscn" id="2_cmtlr"]
+[ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="3_yusaf"]
+[ext_resource type="Resource" uid="uid://bgj51sdwb6tek" path="res://Spells/Spell Data Blobs/BoltSpell.tres" id="4_ghp5r"]
+[ext_resource type="Resource" uid="uid://cerkdmvdxs8dl" path="res://Spells/Spell Data Blobs/LobSpell.tres" id="5_cdekt"]
+[ext_resource type="Resource" uid="uid://fk0aytuupniy" path="res://Spells/Spell Data Blobs/TotemSpell.tres" id="6_xuli5"]
+[ext_resource type="Resource" uid="uid://ci4lforij7bgs" path="res://Spells/Spell Data Blobs/4thLevelSpell.tres" id="7_1bv0u"]
 
 [node name="PlayerJoinMenu" type="Control" unique_id=223752700 node_paths=PackedStringArray("player_boxes")]
 layout_mode = 3
@@ -14,6 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_7csly")
 player_boxes = [NodePath("HBoxContainer/Left Side/Player 1 Box"), NodePath("HBoxContainer/Right Side/Player 2 Box"), NodePath("HBoxContainer/Left Side/Player 3 Box"), NodePath("HBoxContainer/Right Side/Player 4 Box")]
 next_level = ExtResource("2_1b15p")
+possible_spells_core = Array[ExtResource("3_yusaf")]([ExtResource("4_ghp5r"), ExtResource("5_cdekt"), ExtResource("6_xuli5"), ExtResource("7_1bv0u")])
 
 [node name="Background Image" type="TextureRect" parent="." unique_id=293172243]
 layout_mode = 1

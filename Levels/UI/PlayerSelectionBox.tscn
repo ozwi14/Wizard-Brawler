@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8nlmtodkvsob" path="res://Levels/UI/player_selection_box.gd" id="1_x5i03"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_6hu8l"]
+[ext_resource type="PackedScene" uid="uid://crfsbhlg72xxc" path="res://Levels/UI/SpellSelectionBox.tscn" id="3_smaar"]
 
 [node name="PlayerSelectionBox" type="Control" unique_id=1716006803]
 layout_mode = 3
@@ -43,3 +44,11 @@ layout_mode = 2
 size_flags_vertical = 4
 max_value = 0.5
 step = 0.0
+
+[node name="Mask Selection Outer Box" type="HBoxContainer" parent="VBoxContainer" unique_id=958659968]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SpellSelectionBox" parent="VBoxContainer/Mask Selection Outer Box" unique_id=1594973397 instance=ExtResource("3_smaar")]
+layout_mode = 2
+size_flags_horizontal = 3

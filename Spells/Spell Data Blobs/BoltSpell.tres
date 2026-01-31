@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SpellItemData" format=3 uid="uid://bgj51sdwb6tek"]
+
+[ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="1_0vbum"]
+[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="1_j7tkj"]
+[ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="1_ob33e"]
+
+[resource]
+script = ExtResource("1_ob33e")
+name = "Bolt"
+icon = ExtResource("1_j7tkj")
+scene = ExtResource("1_0vbum")
+metadata/_custom_type_script = "uid://4u87srhdthks"
