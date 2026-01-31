@@ -1,37 +1,23 @@
 [gd_scene format=3 uid="uid://qi58sa5lb4e0"]
 
-<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="1_ddoul"]
 [ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Archetypes/spell_lob.tscn" id="2_6ysni"]
 [ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="2_s1rgi"]
 [ext_resource type="PackedScene" uid="uid://ctq3ipqco3k2c" path="res://Player/Arrow.tscn" id="3_tok1r"]
-[ext_resource type="Texture2D" uid="uid://cchs2qra8182y" path="res://Art/Temp art/Base_Wizard.png" id="4_ddoul"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="6_6ysni"]
+[ext_resource type="PackedScene" uid="uid://lw2rggchldx" path="res://Player/player_prettyness.tscn" id="7_s1rgi"]
 [ext_resource type="PackedScene" uid="uid://06powvntbqde" path="res://Components/GetPlayerDirection.tscn" id="7_vlldt"]
-=======
-[ext_resource type="Script" uid="uid://drsnjufno0svl" path="res://Player/Player 2 FOR TESTING/player 2.gd" id="1_q3lat"]
-[ext_resource type="Texture2D" uid="uid://ltal2ggd6nat" path="res://Art/Temp art/arrow.png" id="3_ddoul"]
-[ext_resource type="Script" uid="uid://dbbne1ru83n3q" path="res://Player/arrow.gd" id="4_8g4oa"]
-[ext_resource type="PackedScene" uid="uid://lw2rggchldx" path="res://Player/player_prettyness.tscn" id="5_8g4oa"]
->>>>>>> Hamtastic-2.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
 size = Vector2(79.99999, 158.88887)
 
 [node name="Player" type="CharacterBody2D" unique_id=1963970088]
 modulate = Color(1, 0, 0, 1)
-<<<<<<< HEAD
 z_index = 10
 scale = Vector2(0.45, 0.45)
-=======
->>>>>>> Hamtastic-2.0
 collision_layer = 2
 script = ExtResource("1_ddoul")
 spell_array = Array[PackedScene]([ExtResource("2_s1rgi"), ExtResource("2_6ysni"), ExtResource("2_6ysni")])
-
-[node name="Player prettyness2" parent="." unique_id=155942807 instance=ExtResource("5_8g4oa")]
-position = Vector2(0, -7.9999995)
-scale = Vector2(0.6250097, 0.6250097)
 
 [node name="Movement collision" type="CollisionShape2D" parent="." unique_id=210919730]
 position = Vector2(0, -0.22222261)
@@ -48,3 +34,5 @@ direction_component = NodePath("../GetPlayerDirection")
 
 [node name="GetPlayerDirection" parent="." unique_id=1387782851 node_paths=PackedStringArray("player") instance=ExtResource("7_vlldt")]
 player = NodePath("..")
+
+[node name="Player prettyness" parent="." unique_id=155942807 instance=ExtResource("7_s1rgi")]
