@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://lsc3jn1ijr47"]
+[gd_scene format=3 uid="uid://bs5213k8spsmu"]
 
-[ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_b8a8k"]
-[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_ixwvm"]
+[ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_buhcm"]
+[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_36dcq"]
+[ext_resource type="PackedScene" uid="uid://ud0ki4l0yq3n" path="res://Spells/Spell effects/pulse_repeat.tscn" id="3_6ts3i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -12,16 +13,18 @@ gravity = Vector3(0, 98, 0)
 [node name="spell_bolt" type="CharacterBody2D" unique_id=1082149160]
 collision_layer = 4
 collision_mask = 3
-script = ExtResource("1_b8a8k")
+script = ExtResource("1_buhcm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_ixwvm")
+texture = ExtResource("2_36dcq")
 
 [node name="Wall Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
 process_material = SubResource("ParticleProcessMaterial_poaw0")
+
+[node name="Pulse Repeat" parent="." unique_id=1482470163 instance=ExtResource("3_6ts3i")]
 
 [connection signal="child_entered_tree" from="Wall Collider" to="Wall Collider" method="_on_child_entered_tree"]

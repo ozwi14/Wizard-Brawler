@@ -2,7 +2,7 @@ extends Node2D
 @export var child_spell : PackedScene
 var direction : Vector2
 
-@export var timer : Timer = 
+@export var timer : Timer
 @export var spell_spawners : Array[Spell_spawner] = []
 
 # Called when the node enters the scene tree for the first time.
@@ -21,4 +21,4 @@ func _on_timer_timeout() -> void:
 		for i in spell_spawners:
 			var dir = i.global_transform.x
 			i.spawn_children(child_spell,dir)
-	get_parent().queue_free()
+	

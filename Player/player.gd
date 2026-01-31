@@ -72,39 +72,37 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	#Do jump
+	var input_direction : Vector2
+	input_direction = _player_get_movement_input()
+	
+	direction_last_pointed = input_direction
+	
 	_player_jump()
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_X):
 		if not was_x_pressed:
 			was_x_pressed = true
-			if Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down") != Vector2(0,0):
-				var dir = Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")
-				player_spell_spawner.spawn_children(spell_array[0],dir)
+			if input_direction != Vector2(0,0):
+				player_spell_spawner.spawn_children(spell_array[0],input_direction)
 	else:
 		was_x_pressed = false
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_B):
 		if not was_b_pressed:
 			was_b_pressed = true
-			if Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down") != Vector2(0,0):
-				var dir = Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")
-				player_spell_spawner.spawn_children(spell_array[1],dir)
+			if input_direction != Vector2(0,0):
+				player_spell_spawner.spawn_children(spell_array[1],input_direction)
 	else:
 		was_b_pressed = false
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_Y):
 		if not was_y_pressed:
 			was_y_pressed = true
-			if Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down") != Vector2(0,0):
-				var dir = Input.get_vector("p1 left", "p1 right", "p1 up", "p1 down")
-				player_spell_spawner.spawn_children(spell_array[2],dir)
+			if input_direction != Vector2(0,0):
+				player_spell_spawner.spawn_children(spell_array[2],input_direction)
 	else:
 		was_y_pressed = false
 	
 	#get player inputs
-	var input_direction : Vector2
 	var CUR_FRICTION = GROUND_FRICTION
 	var CUR_ACC = GROUND_ACC
-	input_direction = _player_get_movement_input()
-	
-	direction_last_pointed = input_direction
 	
 	#try to move horizontally based on if you are flying or on ground
 	if input_direction : 
