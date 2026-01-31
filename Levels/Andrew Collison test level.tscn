@@ -1,9 +1,8 @@
 [gd_scene format=4 uid="uid://dtrc2iuljoxpt"]
 
-[ext_resource type="Script" path="res://Levels/hamtastic_test_level.gd" id="1_h8gys"]
+[ext_resource type="Script" uid="uid://dbtlbkpgs2lqj" path="res://Levels/hamtastic_test_level.gd" id="1_h8gys"]
 [ext_resource type="PackedScene" uid="uid://qi58sa5lb4e0" path="res://Player/Player.tscn" id="2_nb7qc"]
-[ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="3_t4cn3"]
-[ext_resource type="PackedScene" uid="uid://xp1xct7dsj32" path="res://Player/Player 2 FOR TESTING/Player 2.tscn" id="4_waf3t"]
+[ext_resource type="PackedScene" uid="uid://bh3lbkglpuowl" path="res://Levels/PlayerSpawner.tscn" id="3_b0r3j"]
 [ext_resource type="Texture2D" uid="uid://dgbjxj2bgegl1" path="res://Art/Temp art/build_atlas.png" id="5_6o7y2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_foulw"]
@@ -2681,14 +2680,6 @@ normal = Vector2(1, 0)
 [node name="HamtasticTestLevel" type="Node2D" unique_id=894939379]
 script = ExtResource("1_h8gys")
 
-[node name="Player" parent="." unique_id=2116911412 instance=ExtResource("2_nb7qc")]
-position = Vector2(870, 196)
-script = ExtResource("3_t4cn3")
-AIR_ACC = 200
-
-[node name="Player2" parent="." unique_id=1963970088 instance=ExtResource("4_waf3t")]
-position = Vector2(1113, 211)
-
 [node name="Permiable Floors" type="TileMapLayer" parent="." unique_id=537550522]
 z_index = -1
 position = Vector2(1, 0)
@@ -2727,3 +2718,20 @@ shape = SubResource("WorldBoundaryShape2D_ai0r7")
 [node name="Left Boundry" type="CollisionShape2D" parent="World Border/StaticBody2D" unique_id=686074135]
 position = Vector2(0, 540)
 shape = SubResource("WorldBoundaryShape2D_8fcuh")
+
+[node name="PlayerSpawner" parent="." unique_id=1756713677 node_paths=PackedStringArray("spawn_points") instance=ExtResource("3_b0r3j")]
+spawn_points = [NodePath("Player 1 Spawnpoint"), NodePath("Player 2 Spawnpoint"), NodePath("Player 3 Spawnpoint"), NodePath("Player 4 Spawnpoint")]
+player_scene = ExtResource("2_nb7qc")
+debug_spawn_players = true
+
+[node name="Player 1 Spawnpoint" type="Node2D" parent="PlayerSpawner" unique_id=1086526047]
+position = Vector2(175, 409)
+
+[node name="Player 2 Spawnpoint" type="Node2D" parent="PlayerSpawner" unique_id=1277453239]
+position = Vector2(1654, 639)
+
+[node name="Player 3 Spawnpoint" type="Node2D" parent="PlayerSpawner" unique_id=1444068063]
+position = Vector2(283, 826)
+
+[node name="Player 4 Spawnpoint" type="Node2D" parent="PlayerSpawner" unique_id=21425452]
+position = Vector2(1435, 825)

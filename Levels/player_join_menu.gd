@@ -47,11 +47,12 @@ func _on_player_ready() -> void:
 	
 	if players_ready == players_joined and players_ready >= 2:
 		for player_box in player_boxes:
-			var player: PlayerData = PlayerData.new()
-			player.player_id = player_box.player_id
-			player.device_id = player_box.device_id
-	
-			GameManager.add_players(player)
+			if player_box.player_state == PlayerSelectionBox.PlayerSelectionState.PlayerReady:
+				var player: PlayerData = PlayerData.new()
+				player.player_id = player_box.player_id
+				player.device_id = player_box.device_id
+				
+				GameManager.add_players(player)
 		
 		# Load next scene
 		print("Load next level")

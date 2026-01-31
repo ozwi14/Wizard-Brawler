@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b78ch2jkg8fdp"]
 
 [ext_resource type="Script" uid="uid://bwhyodf7j7y3k" path="res://Levels/player_join_menu.gd" id="1_7csly"]
+[ext_resource type="PackedScene" uid="uid://dt6xiqj7cgary" path="res://Levels/Hamtastic test level.tscn" id="2_1b15p"]
 [ext_resource type="PackedScene" uid="uid://d15yqprgw575i" path="res://Levels/UI/PlayerSelectionBox.tscn" id="2_cmtlr"]
 
 [node name="PlayerJoinMenu" type="Control" unique_id=223752700 node_paths=PackedStringArray("player_boxes")]
@@ -12,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7csly")
 player_boxes = [NodePath("HBoxContainer/Left Side/Player 1 Box"), NodePath("HBoxContainer/Right Side/Player 2 Box"), NodePath("HBoxContainer/Left Side/Player 3 Box"), NodePath("HBoxContainer/Right Side/Player 4 Box")]
+next_level = ExtResource("2_1b15p")
 
 [node name="Background Image" type="TextureRect" parent="." unique_id=293172243]
 layout_mode = 1
