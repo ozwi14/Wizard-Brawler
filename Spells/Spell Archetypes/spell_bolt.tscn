@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lsc3jn1ijr47"]
 
-[ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell.gd" id="1_b8a8k"]
+[ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_b8a8k"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_ixwvm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]

@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bcjqkop1asjwk" path="res://Spells/Spell Code/spell_lob.gd" id="1_hfvw7"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_0leds"]
+[ext_resource type="Script" uid="uid://cdxsh7kdh18gt" path="res://Spells/Built Spells/delay_split.gd" id="3_rkijp"]
+[ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="4_mow12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -21,3 +23,24 @@ shape = SubResource("RectangleShape2D_mr5cl")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
 process_material = SubResource("ParticleProcessMaterial_poaw0")
+
+[node name="Delay Split" type="Node2D" parent="." unique_id=1613824873]
+script = ExtResource("3_rkijp")
+
+[node name="Spell Spawner" parent="Delay Split" unique_id=288123730 instance=ExtResource("4_mow12")]
+position = Vector2(0, -20)
+rotation = -0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Spell Spawner2" parent="Delay Split" unique_id=1616307478 instance=ExtResource("4_mow12")]
+position = Vector2(-1, 0)
+
+[node name="Spell Spawner3" parent="Delay Split" unique_id=834205997 instance=ExtResource("4_mow12")]
+position = Vector2(0.99999976, 14)
+rotation = 0.7853982
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Timer" type="Timer" parent="Delay Split" unique_id=889224465]
+wait_time = 2.0
+
+[connection signal="timeout" from="Delay Split/Timer" to="Delay Split" method="_on_timer_timeout"]
