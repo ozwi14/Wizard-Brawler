@@ -11,13 +11,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
 size = Vector2(64, 128.44446)
 
-[node name="Player" type="CharacterBody2D" unique_id=1963970088]
+[node name="Player" type="CharacterBody2D" unique_id=1963970088 node_paths=PackedStringArray("player_spell_spawner")]
 modulate = Color(1, 0, 0, 1)
 z_index = 10
 scale = Vector2(0.45, 0.45)
 collision_layer = 2
 script = ExtResource("1_ddoul")
 spell_array = Array[PackedScene]([ExtResource("2_s1rgi"), ExtResource("2_6ysni"), ExtResource("2_6ysni")])
+player_spell_spawner = NodePath("Arrow/Test Spell Spawner")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055726692]
 position = Vector2(0, -8.88889)
@@ -35,7 +36,8 @@ shape = SubResource("RectangleShape2D_q3lat")
 [node name="Arrow" parent="." unique_id=948549401 node_paths=PackedStringArray("direction_component") instance=ExtResource("3_tok1r")]
 direction_component = NodePath("../GetPlayerDirection")
 
-[node name="Test Spell Spawner" parent="Arrow" unique_id=288123730 instance=ExtResource("6_6ysni")]
+[node name="Test Spell Spawner" parent="Arrow" unique_id=288123730 node_paths=PackedStringArray("direction_component") instance=ExtResource("6_6ysni")]
+direction_component = NodePath("../../GetPlayerDirection")
 
 [node name="GetPlayerDirection" parent="." unique_id=1387782851 node_paths=PackedStringArray("player") instance=ExtResource("7_vlldt")]
 player = NodePath("..")

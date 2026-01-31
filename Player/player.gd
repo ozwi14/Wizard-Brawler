@@ -12,7 +12,7 @@ class_name Player extends CharacterBody2D
 var _jumps_remaining : int
 
 @export var spell_array : Array[PackedScene] = []
-@onready var player_spell_spawner = $"Arrow/Test Spell Spawner"
+@export var player_spell_spawner : SpellSpawner
 
 var FIRE_ANGLE : Vector2
 var end_pos : Vector2 = Vector2(150, 150)
