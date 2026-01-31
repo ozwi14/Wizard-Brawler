@@ -26,7 +26,6 @@ func _physics_process(delta: float) -> void:
 	if move_and_slide():
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
-			print("Collided with: ", collision.get_collider().name)
 			var col = collision.get_collider()
 			if col.name == "Solid walls":
 				emit_signal("collision_wall")

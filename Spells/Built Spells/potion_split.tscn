@@ -3,15 +3,11 @@
 [ext_resource type="Script" uid="uid://bcjqkop1asjwk" path="res://Spells/Spell Code/spell_lob.gd" id="1_hfvw7"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_0leds"]
 [ext_resource type="PackedScene" uid="uid://bv7i2dwugewt4" path="res://Spells/Spell Spawners/delay_death_spawner.tscn" id="3_d3hxa"]
-[ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Archetypes/spell_lob.tscn" id="4_gniq4"]
+[ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Built Spells/spell_lob.tscn" id="4_gniq4"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="5_mow12"]
 [ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="6_gniq4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_poaw0"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
 
 [node name="potion_split" type="CharacterBody2D" unique_id=1082149160]
 collision_layer = 4
@@ -25,9 +21,6 @@ texture = ExtResource("2_0leds")
 [node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")
 disabled = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
-process_material = SubResource("ParticleProcessMaterial_poaw0")
 
 [node name="Delay Split" parent="." unique_id=1482470163 instance=ExtResource("3_d3hxa")]
 child_spell = ExtResource("4_gniq4")

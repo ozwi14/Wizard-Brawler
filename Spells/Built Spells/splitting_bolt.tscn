@@ -8,10 +8,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_poaw0"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-
 [node name="bolt_split" type="CharacterBody2D" unique_id=1082149160]
 collision_layer = 4
 collision_mask = 3
@@ -24,9 +20,6 @@ texture = ExtResource("2_84or8")
 [node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")
 disabled = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
-process_material = SubResource("ParticleProcessMaterial_poaw0")
 
 [node name="Delay Split" parent="." unique_id=1482470163 instance=ExtResource("3_78rcs")]
 
