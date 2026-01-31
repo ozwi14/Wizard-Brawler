@@ -11,6 +11,9 @@ class_name Player extends CharacterBody2D
 
 var _jumps_remaining : int
 
+@export var spell_array : Array[PackedScene] = []
+@onready var player_spell_spawner = $"Arrow/Player Spell Spawner"
+
 var FIRE_ANGLE : Vector2
 var end_pos : Vector2 = Vector2(150, 150)
 var line_color : Color = Color.BLACK
@@ -20,6 +23,9 @@ var line_thickness : float = 30.0
 var key_jump : String
 var key_left : String
 var key_right : String
+var key_spell_x : String
+var key_spell_y : String
+var key_spell_b : String
 
 @export var player_data : PlayerData
 
@@ -69,7 +75,13 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	#Do jump
-	_player_jump() 
+	_player_jump()
+	if Input.is_action_just_pressed(key_spell_x) :
+		player_spell_spawner.spawn_children(spell_array[0])
+	if Input.is_action_just_pressed(key_spell_b) :
+		player_spell_spawner.spawn_children(spell_array[1])
+	if Input.is_action_just_pressed(key_spell_y) :
+		player_spell_spawner.spawn_children(spell_array[2])
 	
 	#get player inputs
 	var input_direction : Vector2

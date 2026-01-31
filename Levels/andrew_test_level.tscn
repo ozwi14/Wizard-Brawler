@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d227de6kfh00j"]
+[gd_scene format=3 uid="uid://dbta6xnougorm"]
 
 [ext_resource type="PackedScene" uid="uid://d3fssig5r8xou" path="res://Spells/Spell Scenes/test_spell_spawner.tscn" id="1_386df"]
 [ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Scenes/spell_lob.tscn" id="2_rpovx"]
