@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ud0ki4l0yq3n"]
+
+[ext_resource type="Script" uid="uid://deuck70uq2fiv" path="res://Spells/Spell Spawners/pulse_repeater.gd" id="1_5ol14"]
+
+[node name="Pulse Repeater" type="Node2D" unique_id=1482470163]
+script = ExtResource("1_5ol14")

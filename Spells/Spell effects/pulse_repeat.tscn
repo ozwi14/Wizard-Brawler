@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://ud0ki4l0yq3n"]
-
-[ext_resource type="Script" uid="uid://deuck70uq2fiv" path="res://Spells/Spell effects/pulse_repeat.gd" id="1_5ol14"]
-
-[node name="Pulse Repeat" type="Node2D" unique_id=1482470163]
-script = ExtResource("1_5ol14")

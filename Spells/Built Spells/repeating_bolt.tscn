@@ -1,8 +1,10 @@
-[gd_scene format=3 uid="uid://bs5213k8spsmu"]
+[gd_scene format=3 uid="uid://7lt0q8jmv5pc"]
 
 [ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_buhcm"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_36dcq"]
-[ext_resource type="PackedScene" uid="uid://ud0ki4l0yq3n" path="res://Spells/Spell effects/pulse_repeat.tscn" id="3_6ts3i"]
+[ext_resource type="PackedScene" uid="uid://ud0ki4l0yq3n" path="res://Spells/Spell Spawners/pulse_repeater.tscn" id="3_6ts3i"]
+[ext_resource type="PackedScene" uid="uid://blv6qitsqxrxm" path="res://Spells/Spell Archetypes/spell_pulse.tscn" id="4_4c0bs"]
+[ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="5_y4wso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -10,7 +12,7 @@
 particle_flag_disable_z = true
 gravity = Vector3(0, 98, 0)
 
-[node name="spell_bolt" type="CharacterBody2D" unique_id=1082149160]
+[node name="repeatin_bolt" type="CharacterBody2D" unique_id=1082149160]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_buhcm")
@@ -25,6 +27,10 @@ shape = SubResource("RectangleShape2D_mr5cl")
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
 process_material = SubResource("ParticleProcessMaterial_poaw0")
 
-[node name="Pulse Repeat" parent="." unique_id=1482470163 instance=ExtResource("3_6ts3i")]
+[node name="Pulse Repeater" parent="." unique_id=1482470163 node_paths=PackedStringArray("spell_spawners") instance=ExtResource("3_6ts3i")]
+child_spell = ExtResource("4_4c0bs")
+spell_spawners = [NodePath("Spell Spawner")]
+
+[node name="Spell Spawner" parent="Pulse Repeater" unique_id=288123730 instance=ExtResource("5_y4wso")]
 
 [connection signal="child_entered_tree" from="Wall Collider" to="Wall Collider" method="_on_child_entered_tree"]
