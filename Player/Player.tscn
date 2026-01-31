@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://qi58sa5lb4e0"]
 
 [ext_resource type="Script" uid="uid://celkm11r6hwko" path="res://Player/player.gd" id="1_ddoul"]
+[ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Scenes/spell_lob.tscn" id="2_6ysni"]
+[ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Scenes/Spell.tscn" id="2_s1rgi"]
 [ext_resource type="PackedScene" uid="uid://ctq3ipqco3k2c" path="res://Player/Arrow.tscn" id="3_tok1r"]
 [ext_resource type="Texture2D" uid="uid://cchs2qra8182y" path="res://Art/Temp art/Base_Wizard.png" id="4_ddoul"]
-[ext_resource type="PackedScene" uid="uid://d3fssig5r8xou" path="res://Spells/Spell Scenes/test_spell_spawner.tscn" id="7_vlldt"]
+[ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Scenes/spell_spawner.tscn" id="6_6ysni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3lat"]
 size = Vector2(64, 128.44446)
@@ -14,6 +16,7 @@ z_index = 10
 scale = Vector2(0.45, 0.45)
 collision_layer = 2
 script = ExtResource("1_ddoul")
+spell_array = Array[PackedScene]([ExtResource("2_s1rgi"), ExtResource("2_6ysni"), ExtResource("2_6ysni")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055726692]
 position = Vector2(0, -8.88889)
@@ -31,5 +34,4 @@ shape = SubResource("RectangleShape2D_q3lat")
 [node name="Arrow" parent="." unique_id=948549401 node_paths=PackedStringArray("player") instance=ExtResource("3_tok1r")]
 player = NodePath("..")
 
-[node name="Test Spell Spawner" parent="Arrow" unique_id=288123730 node_paths=PackedStringArray("player") instance=ExtResource("7_vlldt")]
-player = NodePath("../..")
+[node name="Test Spell Spawner" parent="Arrow" unique_id=288123730 instance=ExtResource("6_6ysni")]
