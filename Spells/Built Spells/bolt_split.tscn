@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_84or8"]
 [ext_resource type="PackedScene" uid="uid://bv7i2dwugewt4" path="res://Spells/Spell Spawners/delay_death_spawner.tscn" id="3_78rcs"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="4_im7sa"]
+[ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="5_78rcs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -11,7 +12,7 @@
 particle_flag_disable_z = true
 gravity = Vector3(0, 98, 0)
 
-[node name="spell_bolt" type="CharacterBody2D" unique_id=1082149160]
+[node name="bolt_split" type="CharacterBody2D" unique_id=1082149160]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_c3qhf")
@@ -27,8 +28,7 @@ disabled = true
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
 process_material = SubResource("ParticleProcessMaterial_poaw0")
 
-[node name="Delay Split" parent="." unique_id=1482470163 node_paths=PackedStringArray("spell_spawners") instance=ExtResource("3_78rcs")]
-spell_spawners = [NodePath("Spell Spawner"), NodePath("Spell Spawner2"), NodePath("Spell Spawner3")]
+[node name="Delay Split" parent="." unique_id=1482470163 instance=ExtResource("3_78rcs")]
 
 [node name="Spell Spawner" parent="Delay Split" unique_id=288123730 instance=ExtResource("4_im7sa")]
 
@@ -40,3 +40,9 @@ rotation = -0.23212878
 position = Vector2(0, -1)
 rotation = 0.2617994
 scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Collison Spawner" parent="." unique_id=1953844848 instance=ExtResource("5_78rcs")]
+
+[node name="Spell Spawner" parent="Collison Spawner" unique_id=8270730 instance=ExtResource("4_im7sa")]
+position = Vector2(-4, 0)
+rotation = 3.1415925

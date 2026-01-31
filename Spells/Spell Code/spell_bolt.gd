@@ -2,6 +2,9 @@ class_name spell_bolt extends CharacterBody2D
 
 var direction : Vector2
 const SPEED = 300
+var chain_list : Array[PackedScene]
+signal collision_wall
+var player_id : int
 
 #func _init(dir : Vector2) -> void:
 	#direction = dir
@@ -17,10 +20,13 @@ func _physics_process(delta: float) -> void:
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
 			print("Collided with: ", collision.get_collider().name)
-			if collision.get_collider().name == "Solid walls":
-					queue_free()
-			if collision.get_collider().name == "Permiable Floors":
-					queue_free()
-			if collision.get_collider().name == "Player":
-					#queue_free()
-					pass
+			var col = collision.get_collider()
+			if col.name == "Solid walls":
+				emit_signal("collision_wall")
+			if col.name == "Permiable Floors":
+				emit_signal("collision_wall")
+			if col.has_method("_player_jump"):
+				var player: Player = col
+				if player_id != player.player_data.player_id:
+					player.queue_free()
+				
