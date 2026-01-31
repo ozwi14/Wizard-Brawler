@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b6ptlfb6liq6v"]
+
+[ext_resource type="Script" uid="uid://bfb7b1t04vnpl" path="res://Components/get_fixed_direction.gd" id="1_my8qg"]
+
+[node name="GetFixedDirection" type="Node" unique_id=544035461]
+script = ExtResource("1_my8qg")

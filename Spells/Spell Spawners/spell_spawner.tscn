@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dvh6aduu1or74"]
+
+[ext_resource type="Script" uid="uid://cvniliwq1w5c1" path="res://Spells/Spell Code/spell_spawner.gd" id="1_wxw3s"]
+[ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="2_5hbt4"]
+
+[node name="Spell Spawner" type="Node2D" unique_id=288123730]
+script = ExtResource("1_wxw3s")
+child_spell = ExtResource("2_5hbt4")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1024636556]
+position = Vector2(41, 0)

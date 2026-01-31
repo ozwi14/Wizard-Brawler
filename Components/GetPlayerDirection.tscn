@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://06powvntbqde"]
+
+[ext_resource type="Script" uid="uid://bsykqfenwkgoa" path="res://Components/get_player_direction.gd" id="1_dja20"]
+
+[node name="GetPlayerDirection" type="Node" unique_id=1387782851]
+script = ExtResource("1_dja20")

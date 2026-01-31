@@ -3,7 +3,7 @@ extends Node2D
 @export var child_spell : PackedScene
 @export var direction : Vector2 = Vector2.RIGHT
 
-@export var player : Player
+@export var direction_component : BaseGetDirection
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +12,9 @@ func _ready() -> void:
 	
 	
 func spawn_children():
-	if player.direction_last_pointed != Vector2(0,0):
-		var dir = player.direction_last_pointed
+	var direction = direction_component.getDirection()
+	if direction != Vector2(0,0):
+		var dir = direction
 		if child_spell == null or dir == Vector2(0,0):
 			return
 		direction = dir
