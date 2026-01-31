@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://ca6umv16hrbu7"]
+
+[ext_resource type="Texture2D" uid="uid://dug4h78aln8dp" path="res://Art/Temp art/chandelier.png" id="1_kjfvd"]
+[ext_resource type="Texture2D" uid="uid://cliw4awtw5s4f" path="res://Art/Temp art/Tourch (1).png" id="2_h0vwe"]
+[ext_resource type="Script" uid="uid://raxg18u2r4c5" path="res://Levels/Visual Assets/torch_1.gd" id="3_sbqr0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7n76"]
+size = Vector2(62.680847, 4.9488525)
+
+[sub_resource type="Gradient" id="Gradient_i6gjl"]
+colors = PackedColorArray(0.8703704, 0.8703704, 0.8703704, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4iq5b"]
+gradient = SubResource("Gradient_i6gjl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="Chandelier" type="Node2D" unique_id=299434147]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1703867038]
+node_a = NodePath("../Pivot")
+node_b = NodePath("../Body")
+softness = 1.16
+
+[node name="Pivot" type="StaticBody2D" parent="." unique_id=622912953]
+
+[node name="Body" type="RigidBody2D" parent="." unique_id=725298044]
+position = Vector2(1, 79)
+collision_mask = 3
+mass = 0.001
+
+[node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=11754016]
+position = Vector2(1.044681, -25.255608)
+texture = ExtResource("1_kjfvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body" unique_id=1125983399]
+position = Vector2(-1.0446777, 9.091919)
+shape = SubResource("RectangleShape2D_w7n76")
+
+[node name="Torch 1" type="Sprite2D" parent="Body" unique_id=1254656703]
+position = Vector2(-26.117023, -7.0715704)
+texture = ExtResource("2_h0vwe")
+
+[node name="PointLight2D" type="PointLight2D" parent="Body/Torch 1" unique_id=927788822]
+position = Vector2(0, -9.999999)
+scale = Vector2(-4.9102116, -4.9102116)
+color = Color(0.8056036, 0.4881776, 0.07065224, 1)
+energy = 1.16
+shadow_enabled = true
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_4iq5b")
+script = ExtResource("3_sbqr0")
+base_energy = 0.9
+
+[node name="Torch 2" type="Sprite2D" parent="Body" unique_id=814214815]
+position = Vector2(26.117023, -8.081795)
+texture = ExtResource("2_h0vwe")
+
+[node name="PointLight2D" type="PointLight2D" parent="Body/Torch 2" unique_id=2000945386]
+position = Vector2(0, -9.999999)
+scale = Vector2(-4.9102116, -4.9102116)
+color = Color(0.8056036, 0.4881776, 0.07065224, 1)
+energy = 1.16
+shadow_enabled = true
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_4iq5b")
+script = ExtResource("3_sbqr0")
+base_energy = 0.9
