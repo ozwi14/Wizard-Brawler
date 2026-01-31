@@ -2722,6 +2722,7 @@ shape = SubResource("WorldBoundaryShape2D_8fcuh")
 [node name="PlayerSpawner" parent="." unique_id=1756713677 node_paths=PackedStringArray("spawn_points") instance=ExtResource("5_foulw")]
 spawn_points = [NodePath("Spawn Point 1"), NodePath("Spawn Point 2"), NodePath("Spawn Point 3"), NodePath("Spawn Point 4")]
 player_scene = ExtResource("1_2nk32")
+debug_spawn_players = true
 
 [node name="Spawn Point 1" type="Node2D" parent="PlayerSpawner" unique_id=1711605410]
 position = Vector2(173, 407)
