@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7cct73y2kjqi"
+path="res://.godot/imported/Aylex - Travelling (freetouse.com).mp3-ff71b71c4bb04a9f0cb099d1d85d0e83.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/Aylex - Travelling (freetouse.com).mp3"
+dest_files=["res://.godot/imported/Aylex - Travelling (freetouse.com).mp3-ff71b71c4bb04a9f0cb099d1d85d0e83.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
