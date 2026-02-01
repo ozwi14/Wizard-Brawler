@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bw5ml2uh4hsyp"]
+
+[ext_resource type="Script" uid="uid://cnyhysfotq67t" path="res://Levels/UI/upgrade_spell_slot.gd" id="1_x7u1a"]
+
+[node name="UpgradeSpellSlot" type="Control" unique_id=540488165]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x7u1a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1091845237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player Color 1" type="ColorRect" parent="HBoxContainer" unique_id=330036373]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 0, 0, 1)
+
+[node name="Player Color 2" type="ColorRect" parent="HBoxContainer" unique_id=1152387416]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 1, 1)
+
+[node name="Player Color 3" type="ColorRect" parent="HBoxContainer" unique_id=1288163350]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 1, 0, 1)
+
+[node name="Player Color 4" type="ColorRect" parent="HBoxContainer" unique_id=1153032121]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1459397303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=1248310425]
+layout_mode = 2

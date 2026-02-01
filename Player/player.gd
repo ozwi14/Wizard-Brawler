@@ -26,7 +26,6 @@ var direction_last_pointed : Vector2 = Vector2.RIGHT
 func _ready() -> void:
 	print("Player %d exists", player_data.player_id)
 	print("Player at: ", position)
-	assert(player_data.spells.size() == 3)
 	#set players controls
 	_jumps_remaining = max_jumps
 	pass

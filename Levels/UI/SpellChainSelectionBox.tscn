@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://ci72tpf3sau4r"]
+
+[ext_resource type="Script" uid="uid://dnrei1pln1dlx" path="res://Levels/UI/spell_chain_selection_box.gd" id="1_cfelc"]
+
+[node name="SpellChainSelectionBox" type="Control" unique_id=619217511]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cfelc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=236340132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top Spell Chain Box" type="HBoxContainer" parent="VBoxContainer" unique_id=1539688635]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Spell Box" type="TextureRect" parent="VBoxContainer/Top Spell Chain Box" unique_id=616759413]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="First Chain Colour Box" type="ColorRect" parent="VBoxContainer/Top Spell Chain Box" unique_id=1407420808]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="First Chain Box" type="TextureRect" parent="VBoxContainer/Top Spell Chain Box/First Chain Colour Box" unique_id=1128410775]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Second Chain Colour Box" type="ColorRect" parent="VBoxContainer/Top Spell Chain Box" unique_id=999235902]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Second Chain Box" type="TextureRect" parent="VBoxContainer/Top Spell Chain Box/Second Chain Colour Box" unique_id=1641738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Middle Spell Chain Box" type="HBoxContainer" parent="VBoxContainer" unique_id=1711284293]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Spell Box" type="TextureRect" parent="VBoxContainer/Middle Spell Chain Box" unique_id=1169868202]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="First Chain Colour Box" type="ColorRect" parent="VBoxContainer/Middle Spell Chain Box" unique_id=1034980973]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="First Chain Box" type="TextureRect" parent="VBoxContainer/Middle Spell Chain Box/First Chain Colour Box" unique_id=375299035]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Second Chain Colour Box" type="ColorRect" parent="VBoxContainer/Middle Spell Chain Box" unique_id=749220244]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Second Chain Box" type="TextureRect" parent="VBoxContainer/Middle Spell Chain Box/Second Chain Colour Box" unique_id=1165516424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Bottom Spell Chain Box" type="HBoxContainer" parent="VBoxContainer" unique_id=757534773]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Spell Box" type="TextureRect" parent="VBoxContainer/Bottom Spell Chain Box" unique_id=1837133546]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="First Chain Colour Box" type="ColorRect" parent="VBoxContainer/Bottom Spell Chain Box" unique_id=1645780574]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="First Chain Box" type="TextureRect" parent="VBoxContainer/Bottom Spell Chain Box/First Chain Colour Box" unique_id=1269768146]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="Second Chain Colour Box" type="ColorRect" parent="VBoxContainer/Bottom Spell Chain Box" unique_id=2098197522]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Second Chain Box" type="TextureRect" parent="VBoxContainer/Bottom Spell Chain Box/Second Chain Colour Box" unique_id=241492793]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3

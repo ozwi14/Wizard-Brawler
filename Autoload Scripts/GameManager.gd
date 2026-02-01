@@ -8,5 +8,9 @@ var possible_spells : Array[SpellSelectionDataWrapper]
 signal DeviceLinkedToPlayer
 signal PlayerReady
 
+signal PlayerFinishedUpgrading
+
+var rounds_played : int = 0
+
 func add_players(player: PlayerData) -> void:
 	players.append(player)
