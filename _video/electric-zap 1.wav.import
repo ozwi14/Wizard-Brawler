@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3rm4l1qqcecw"
+path="res://.godot/imported/electric-zap 1.wav-ab0f2be003339c191ae1ee95c2cf6edb.sample"
+
+[deps]
+
+source_file="res://_video/electric-zap 1.wav"
+dest_files=["res://.godot/imported/electric-zap 1.wav-ab0f2be003339c191ae1ee95c2cf6edb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -38,32 +38,21 @@ texture = ExtResource("1_kjfvd")
 position = Vector2(-1.0446777, 9.091919)
 shape = SubResource("RectangleShape2D_w7n76")
 
+[node name="PointLight2D" type="PointLight2D" parent="Body" unique_id=2000945386]
+position = Vector2(-1, -10)
+rotation = 3.1415927
+scale = Vector2(4.9102116, 4.9102116)
+color = Color(0.8056036, 0.4881776, 0.07065224, 1)
+energy = 1.16
+shadow_enabled = true
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_4iq5b")
+script = ExtResource("3_sbqr0")
+
 [node name="Torch 1" type="Sprite2D" parent="Body" unique_id=1254656703]
 position = Vector2(-26.117023, -7.0715704)
 texture = ExtResource("2_h0vwe")
 
-[node name="PointLight2D" type="PointLight2D" parent="Body/Torch 1" unique_id=927788822]
-position = Vector2(0, -9.999999)
-scale = Vector2(-4.9102116, -4.9102116)
-color = Color(0.8056036, 0.4881776, 0.07065224, 1)
-energy = 1.16
-shadow_enabled = true
-shadow_filter = 1
-texture = SubResource("GradientTexture2D_4iq5b")
-script = ExtResource("3_sbqr0")
-base_energy = 0.9
-
 [node name="Torch 2" type="Sprite2D" parent="Body" unique_id=814214815]
 position = Vector2(26.117023, -8.081795)
 texture = ExtResource("2_h0vwe")
-
-[node name="PointLight2D" type="PointLight2D" parent="Body/Torch 2" unique_id=2000945386]
-position = Vector2(0, -9.999999)
-scale = Vector2(-4.9102116, -4.9102116)
-color = Color(0.8056036, 0.4881776, 0.07065224, 1)
-energy = 1.16
-shadow_enabled = true
-shadow_filter = 1
-texture = SubResource("GradientTexture2D_4iq5b")
-script = ExtResource("3_sbqr0")
-base_energy = 0.9

@@ -126,3 +126,5 @@ action_start={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+limits/opengl/max_renderable_lights=64
+limits/opengl/max_lights_per_object=32
