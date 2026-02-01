@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3fmu6ejstet7"
+path="res://.godot/imported/49672__ejfortin__energy-short-sword-1.wav-f1f7547a506a58d37a03bc7b33a806af.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/49672__ejfortin__energy-short-sword-1.wav"
+dest_files=["res://.godot/imported/49672__ejfortin__energy-short-sword-1.wav-f1f7547a506a58d37a03bc7b33a806af.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

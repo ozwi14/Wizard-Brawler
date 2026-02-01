@@ -1,7 +1,43 @@
 [gd_scene format=3 uid="uid://blv6qitsqxrxm"]
 
 [ext_resource type="Script" uid="uid://dempadixy2ias" path="res://Spells/Spell Code/spell_pulse.gd" id="1_dj1m1"]
-[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_ghern"]
+[ext_resource type="Texture2D" uid="uid://cu3xeqarikij6" path="res://Art/LightEffects/LightEffect_01.png" id="2_hnbpl"]
+[ext_resource type="Texture2D" uid="uid://bnhmugrayunek" path="res://Art/LightEffects/LightEffect_02.png" id="3_ytq3i"]
+[ext_resource type="Texture2D" uid="uid://dd734g44ohvqq" path="res://Art/LightEffects/LightEffect_03.png" id="4_m2fi6"]
+[ext_resource type="Texture2D" uid="uid://drro3qbppdug5" path="res://Art/LightEffects/LightEffect_04.png" id="5_jlfln"]
+[ext_resource type="Texture2D" uid="uid://bs00tkkrjg4pb" path="res://Art/LightEffects/LightEffect_05.png" id="6_mgmer"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rjfmg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hnbpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ytq3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m2fi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jlfln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mgmer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jlfln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m2fi6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ytq3i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -14,9 +50,11 @@ collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_dj1m1")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=672648457]
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_ghern")
+sprite_frames = SubResource("SpriteFrames_rjfmg")
+autoplay = "default"
+speed_scale = 5.0
 
 [node name="Wall Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")

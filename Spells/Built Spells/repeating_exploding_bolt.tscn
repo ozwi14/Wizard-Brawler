@@ -1,11 +1,42 @@
 [gd_scene format=3 uid="uid://7lt0q8jmv5pc"]
 
 [ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_bci2f"]
-[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_x6iuu"]
+[ext_resource type="Texture2D" uid="uid://n60gwsfle8wk" path="res://Art/Arcane_Effect/01/Arcane_Effect_2.png" id="2_fc007"]
 [ext_resource type="PackedScene" uid="uid://ud0ki4l0yq3n" path="res://Spells/Spell Spawners/pulse_repeater.tscn" id="3_c8w7g"]
+[ext_resource type="Texture2D" uid="uid://b77f5dud2081f" path="res://Art/Arcane_Effect/01/Arcane_Effect_4.png" id="3_ntoxg"]
+[ext_resource type="Texture2D" uid="uid://d2fr8funowp8d" path="res://Art/Arcane_Effect/01/Arcane_Effect_7.png" id="4_g0vy0"]
 [ext_resource type="PackedScene" uid="uid://7powr6c8odvg" path="res://Spells/Spell Archetypes/spell_single_pulse.tscn" id="4_qn870"]
+[ext_resource type="Texture2D" uid="uid://ckmjqd2huvawk" path="res://Art/Arcane_Effect/01/Arcane_Effect_5.png" id="5_anwyb"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="5_bhyo3"]
+[ext_resource type="Texture2D" uid="uid://bvseky06bm258" path="res://Art/Arcane_Effect/01/Arcane_Effect_6.png" id="6_4jiqf"]
 [ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="6_fc007"]
+[ext_resource type="Texture2D" uid="uid://cv68ek5428k38" path="res://Art/Arcane_Effect/01/Arcane_Effect_3.png" id="7_uijx1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kgol8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fc007")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ntoxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g0vy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_anwyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4jiqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uijx1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -14,9 +45,11 @@ collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_bci2f")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_x6iuu")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1497400088]
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_kgol8")
+autoplay = "default"
+speed_scale = 2.5
 
 [node name="Wall Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")
