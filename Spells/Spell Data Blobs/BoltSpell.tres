@@ -1,12 +1,16 @@
 [gd_resource type="Resource" script_class="SpellItemData" format=3 uid="uid://bgj51sdwb6tek"]
 
 [ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="1_0vbum"]
-[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="1_j7tkj"]
 [ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="1_ob33e"]
+[ext_resource type="Texture2D" uid="uid://b7fd85ly2g26y" path="res://Art/Mask Icons/bolt bottom.png" id="1_xso4g"]
+[ext_resource type="Texture2D" uid="uid://c2raojdquhrya" path="res://Art/Mask Icons/bolt split middle.png" id="2_jd7el"]
+[ext_resource type="Texture2D" uid="uid://cfx17d52yccr8" path="res://Art/Mask Icons/bolt top.png" id="3_f1q2i"]
 
 [resource]
 script = ExtResource("1_ob33e")
 name = "Bolt"
-icon = ExtResource("1_j7tkj")
+icon_top = ExtResource("3_f1q2i")
+icon_middle = ExtResource("2_jd7el")
+icon_bottom = ExtResource("1_xso4g")
 scene = ExtResource("1_0vbum")
 metadata/_custom_type_script = "uid://4u87srhdthks"

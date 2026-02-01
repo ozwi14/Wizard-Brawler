@@ -5,8 +5,11 @@
 [ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="3_gkyvq"]
 [ext_resource type="PackedScene" uid="uid://bw5ml2uh4hsyp" path="res://Levels/UI/UpgradeSpellSlot.tscn" id="3_jfie5"]
 [ext_resource type="Resource" uid="uid://bgj51sdwb6tek" path="res://Spells/Spell Data Blobs/BoltSpell.tres" id="4_c16kk"]
+[ext_resource type="Resource" uid="uid://t41lwx8ssqt6" path="res://Spells/Spell Data Blobs/PulseSpell.tres" id="5_gkyvq"]
 [ext_resource type="Resource" uid="uid://cerkdmvdxs8dl" path="res://Spells/Spell Data Blobs/LobSpell.tres" id="5_kk6la"]
-[ext_resource type="Resource" uid="uid://fk0aytuupniy" path="res://Spells/Spell Data Blobs/TotemSpell.tres" id="6_vog5p"]
+[ext_resource type="Resource" uid="uid://cc55dv1ioy4er" path="res://Spells/Spell Data Blobs/Shotgun Spell.tres" id="6_c16kk"]
+[ext_resource type="Resource" uid="uid://phrnsbslk707" path="res://Spells/Spell Data Blobs/SplitBoltSpell.tres" id="7_kk6la"]
+[ext_resource type="Resource" uid="uid://dltq5786wtuss" path="res://Spells/Spell Data Blobs/SplitLobSpell.tres" id="8_vog5p"]
 
 [node name="Player Upgrade Menu" type="Control" unique_id=223752700 node_paths=PackedStringArray("upgrade_cards")]
 layout_mode = 3
@@ -16,7 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_na53c")
-all_magic_upgrades = Array[ExtResource("3_gkyvq")]([ExtResource("4_c16kk"), ExtResource("5_kk6la"), ExtResource("6_vog5p"), ExtResource("4_c16kk"), ExtResource("5_kk6la"), ExtResource("6_vog5p")])
+all_magic_upgrades = Array[ExtResource("3_gkyvq")]([ExtResource("4_c16kk"), ExtResource("5_kk6la"), ExtResource("5_gkyvq"), ExtResource("6_c16kk"), ExtResource("7_kk6la"), ExtResource("8_vog5p")])
 upgrade_cards = [NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot1"), NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot2"), NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot3"), NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot4"), NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot5")]
 
 [node name="Background Image" type="TextureRect" parent="." unique_id=293172243]

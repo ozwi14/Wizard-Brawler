@@ -20,6 +20,7 @@ var current_layer_selected : int = 0
 @onready var bottom_texture_rect: TextureRect = $"VBoxContainer/Bottom Mask Box/Middle Image/ColorRect/TextureRect"
 @onready var bottom_label: Label = $"VBoxContainer/Bottom Mask Box/Middle Image/ColorRect/Label"
 
+
 func get_spells() -> Array[SpellItemData]:
 	var spell_x : SpellItemData = possible_spells[index_top].spell_data
 	var spell_y : SpellItemData = possible_spells[index_middle].spell_data
@@ -129,17 +130,17 @@ func update_image():
 		top_color_rect.color.a = 1
 		middle_color_rect.color.a = 0
 		bottom_color_rect.color.a = 0
-		top_texture_rect.texture = selected_spell.spell_data.icon
+		top_texture_rect.texture = selected_spell.spell_data.icon_top
 		top_label.text = selected_spell.spell_data.name
 	elif current_layer_selected == 1:
 		top_color_rect.color.a = 0
 		middle_color_rect.color.a = 1
 		bottom_color_rect.color.a = 0
-		middle_texture_rect.texture = selected_spell.spell_data.icon
+		middle_texture_rect.texture = selected_spell.spell_data.icon_middle
 		middle_label.text = selected_spell.spell_data.name
 	elif current_layer_selected == 2:
 		top_color_rect.color.a = 0
 		middle_color_rect.color.a = 0
 		bottom_color_rect.color.a = 1
-		bottom_texture_rect.texture = selected_spell.spell_data.icon
+		bottom_texture_rect.texture = selected_spell.spell_data.icon_bottom
 		bottom_label.text = selected_spell.spell_data.name

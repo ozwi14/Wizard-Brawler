@@ -32,18 +32,22 @@ func _ready() -> void:
 	if players.size() > 0:
 		player_1_upgrade_selection.player_data = players[0]
 		player_1_upgrade_selection.enabled = false
+		player_1_upgrade_selection.set_static_images()
 		player_states.append(PlayerState.SelectingUpgrade)
 	if players.size() > 1:
 		player_2_upgrade_selection.player_data = players[1]
 		player_2_upgrade_selection.enabled = false
+		player_2_upgrade_selection.set_static_images()
 		player_states.append(PlayerState.SelectingUpgrade)
 	if players.size() > 2:
 		player_3_upgrade_selection.player_data = players[2]
 		player_3_upgrade_selection.enabled = false
+		player_3_upgrade_selection.set_static_images()
 		player_states.append(PlayerState.SelectingUpgrade)
 	if players.size() > 3:
 		player_4_upgrade_selection.player_data = players[3]
 		player_4_upgrade_selection.enabled = false
+		player_4_upgrade_selection.set_static_images()
 		player_states.append(PlayerState.SelectingUpgrade)
 	
 	_select_upgrades(card_amount)
@@ -151,3 +155,8 @@ func _select_upgrades(amount: int) -> void:
 	upgrades_to_choose.shuffle()
 
 	upgrades_to_choose = upgrades_to_choose.slice(0, amount)
+	
+	var index : int = -1
+	for upgrade_to_choose in upgrades_to_choose:
+		index += 1
+		upgrade_cards[index].texture_rect.texture = upgrade_to_choose.icon_middle

@@ -10,6 +10,8 @@ var player_4_selected: bool = false
 @onready var player_color_3: ColorRect = $"HBoxContainer/Player Color 3"
 @onready var player_color_4: ColorRect = $"HBoxContainer/Player Color 4"
 
+@onready var texture_rect: TextureRect = $MarginContainer/TextureRect
+
 func _ready() -> void:
 	player_color_1.color.a = 0
 	player_color_2.color.a = 0

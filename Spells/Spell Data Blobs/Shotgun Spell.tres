@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpellItemData" format=3 uid="uid://cc55dv1ioy4er"]
+
+[ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="1_u6edj"]
+[ext_resource type="Texture2D" uid="uid://dteid15f0ng1d" path="res://Art/Mask Icons/shotgun bottom.png" id="1_xnasi"]
+[ext_resource type="Texture2D" uid="uid://chyxx7tpslmoq" path="res://Art/Mask Icons/shotgun middle.png" id="2_hakui"]
+[ext_resource type="Texture2D" uid="uid://bltmpb8jd71l8" path="res://Art/Mask Icons/shotgun mask op.png" id="3_2dhs6"]
+[ext_resource type="PackedScene" uid="uid://b2hdndehbd6a2" path="res://Spells/Built Spells/shotgun_bolt.tscn" id="4_rg4pv"]
+
+[resource]
+script = ExtResource("1_u6edj")
+name = "Shutgun Spell"
+icon_top = ExtResource("3_2dhs6")
+icon_middle = ExtResource("2_hakui")
+icon_bottom = ExtResource("1_xnasi")
+scene = ExtResource("4_rg4pv")
+metadata/_custom_type_script = "uid://4u87srhdthks"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpellItemData" format=3 uid="uid://t41lwx8ssqt6"]
+
+[ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="1_50uxc"]
+[ext_resource type="Texture2D" uid="uid://54n5kkoxskyd" path="res://Art/Mask Icons/pulse bottom.png" id="1_crcwv"]
+[ext_resource type="Texture2D" uid="uid://bg2hpa5w4jcxb" path="res://Art/Mask Icons/Pulse explode middle.png" id="2_3t2nj"]
+[ext_resource type="Texture2D" uid="uid://d1tryx3tqjcl3" path="res://Art/Mask Icons/pulse mask top.png" id="3_u4grw"]
+[ext_resource type="PackedScene" uid="uid://blv6qitsqxrxm" path="res://Spells/Spell Archetypes/spell_pulse.tscn" id="4_ox1n8"]
+
+[resource]
+script = ExtResource("1_50uxc")
+name = "Pusle Spell"
+icon_top = ExtResource("3_u4grw")
+icon_middle = ExtResource("2_3t2nj")
+icon_bottom = ExtResource("1_crcwv")
+scene = ExtResource("4_ox1n8")
+metadata/_custom_type_script = "uid://4u87srhdthks"

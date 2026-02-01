@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpellItemData" format=3 uid="uid://dltq5786wtuss"]
+
+[ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="1_a3hsv"]
+[ext_resource type="Texture2D" uid="uid://8qeioarx4ya4" path="res://Art/Mask Icons/lob bottom.png" id="1_bsnkm"]
+[ext_resource type="Texture2D" uid="uid://d3mfty0i4ay5h" path="res://Art/Mask Icons/split lob middle.png" id="2_1obhp"]
+[ext_resource type="Texture2D" uid="uid://dbvdqmvgaarlu" path="res://Art/Mask Icons/split lob top.png" id="3_swfqm"]
+[ext_resource type="PackedScene" uid="uid://ceb4uj7hvvbih" path="res://Spells/Built Spells/potion_split.tscn" id="4_ho17f"]
+
+[resource]
+script = ExtResource("1_a3hsv")
+name = "Split Lob Spell"
+icon_top = ExtResource("3_swfqm")
+icon_middle = ExtResource("2_1obhp")
+icon_bottom = ExtResource("1_bsnkm")
+scene = ExtResource("4_ho17f")
+metadata/_custom_type_script = "uid://4u87srhdthks"

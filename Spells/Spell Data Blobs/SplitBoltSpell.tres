@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpellItemData" format=3 uid="uid://phrnsbslk707"]
+
+[ext_resource type="Texture2D" uid="uid://bu3l0ldgke3kd" path="res://Art/Mask Icons/split bolt bottom.png" id="1_3aa2i"]
+[ext_resource type="Script" uid="uid://4u87srhdthks" path="res://Spells/SpellData.gd" id="1_uorix"]
+[ext_resource type="Texture2D" uid="uid://c2raojdquhrya" path="res://Art/Mask Icons/bolt split middle.png" id="2_0q0mb"]
+[ext_resource type="Texture2D" uid="uid://cfnbo6ho0f4he" path="res://Art/Mask Icons/split bolt top.png" id="3_r1rtk"]
+[ext_resource type="PackedScene" uid="uid://cjqjhqyjtbcfj" path="res://Spells/Built Spells/splitting_bolt.tscn" id="4_dd2eg"]
+
+[resource]
+script = ExtResource("1_uorix")
+name = "Split Bolt Spell"
+icon_top = ExtResource("3_r1rtk")
+icon_middle = ExtResource("2_0q0mb")
+icon_bottom = ExtResource("1_3aa2i")
+scene = ExtResource("4_dd2eg")
+metadata/_custom_type_script = "uid://4u87srhdthks"
