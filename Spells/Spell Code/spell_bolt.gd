@@ -2,7 +2,7 @@ class_name spell_bolt extends CharacterBody2D
 
 var direction : Vector2
 const SPEED = 300
-var chain_list : Array[PackedScene]
+var chain_list : Array[SpellItemData]
 signal collision_wall
 var player_id : int
 

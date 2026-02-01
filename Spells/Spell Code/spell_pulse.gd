@@ -2,7 +2,7 @@ class_name spell_pulse extends CharacterBody2D
 
 var direction : Vector2
 const SPEED = 0
-var chain_list : Array[PackedScene]
+var chain_list : Array[SpellItemData]
 var player_id : int
 
 @export var min_scale := Vector2.ONE

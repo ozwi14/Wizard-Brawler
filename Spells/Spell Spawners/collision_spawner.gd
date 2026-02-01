@@ -2,7 +2,7 @@ extends Node2D
 @export var child_spell : PackedScene
 var direction : Vector2
 var spell_spawners : Array[spell_spawner] = []
-var chain_list : Array[PackedScene]
+var chain_list : Array[SpellItemData]
 var player_id : int
 
 # Called when the node enters the scene tree for the first time.
@@ -27,7 +27,7 @@ func _on_collison_wall() -> void:
 		for i in spell_spawners:
 			var dir = i.global_transform.x
 			#print("im a peice with", chain_list[0])
-			var tobespawned = chain_list[0]
+			var tobespawned = chain_list[0].scene
 			var local_chain_list := chain_list.duplicate()
 			local_chain_list.remove_at(0)
 			i.spawn_children(tobespawned,dir,local_chain_list,player_id)

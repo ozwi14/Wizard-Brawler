@@ -11,7 +11,7 @@ func _ready() -> void:
 
 	
 	
-func spawn_children(child_spell: PackedScene,dir : Vector2,chain_list : Array[PackedScene],player_id :int):
+func spawn_children(child_spell: PackedScene,dir : Vector2,chain_list : Array[SpellItemData],player_id :int):
 	var subspell = child_spell.instantiate()
 	subspell.direction = dir
 	subspell.global_position = global_position

@@ -11,7 +11,7 @@ class_name Player extends CharacterBody2D
 
 var _jumps_remaining : int
 
-@onready var player_spell_spawner = $"Arrow/Player Spell Spawner"
+@onready var player_spell_spawner: spell_spawner = $"Arrow/Player Spell Spawner"
 @export var direction : Vector2 = Vector2.RIGHT
 
 var FIRE_ANGLE : Vector2
@@ -81,21 +81,21 @@ func _physics_process(delta: float) -> void:
 		if not was_x_pressed:
 			was_x_pressed = true
 			if input_direction != Vector2(0,0):
-				player_spell_spawner.spawn_children(player_data.spells[0],input_direction,player_data.spell_x_chain,player_data.player_id)
+				player_spell_spawner.spawn_children(player_data.spells[0].scene,input_direction,player_data.x_spell_chains,player_data.player_id)
 	else:
 		was_x_pressed = false
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_B):
 		if not was_b_pressed:
 			was_b_pressed = true
 			if input_direction != Vector2(0,0):
-				player_spell_spawner.spawn_children(player_data.spells[1],input_direction,player_data.spell_b_chain,player_data.player_id)
+				player_spell_spawner.spawn_children(player_data.spells[1].scene,input_direction,player_data.b_spell_chains,player_data.player_id)
 	else:
 		was_b_pressed = false
 	if Input.is_joy_button_pressed(player_data.device_id, JOY_BUTTON_Y):
 		if not was_y_pressed:
 			was_y_pressed = true
 			if input_direction != Vector2(0,0):
-				player_spell_spawner.spawn_children(player_data.spells[2],input_direction,player_data.spell_y_chain,player_data.player_id)
+				player_spell_spawner.spawn_children(player_data.spells[2].scene, input_direction, player_data.y_spell_chains, player_data.player_id)
 	else:
 		was_y_pressed = false
 	

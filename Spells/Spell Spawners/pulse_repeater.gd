@@ -4,7 +4,7 @@ var direction : Vector2
 @export var timer_time := 0.5  # editable in Inspector
 var timer : Timer
 var spell_spawners : Array[spell_spawner] = []
-var chain_list : Array[PackedScene]
+var chain_list : Array[SpellItemData]
 var player_id : int
 
 # Called when the node enters the scene tree for the first time.

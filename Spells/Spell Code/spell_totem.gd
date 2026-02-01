@@ -2,7 +2,7 @@ class_name spell_totem extends CharacterBody2D
 
 var direction : Vector2
 const SPEED = 200
-var chain_list : Array[PackedScene]
+var chain_list : Array[SpellItemData]
 var player_id : int
 
 #func _init(dir : Vector2) -> void:
