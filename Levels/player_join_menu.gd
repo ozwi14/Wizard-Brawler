@@ -6,6 +6,8 @@ extends Control
 @export var player_boxes: Array[PlayerSelectionBox]
 
 @export var next_level : PackedScene
+@export var upgrade_level : PackedScene
+
 @export var possible_spells_core : Array[SpellItemData]
 var possible_spells : Array[SpellSelectionDataWrapper]
 
@@ -15,6 +17,9 @@ var players_ready: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player_boxes[0].StartWaitingForDevice()
+	
+	GameManager.game_level = next_level
+	GameManager.upgrade_level = upgrade_level
 	
 	GameManager.DeviceLinkedToPlayer.connect(_on_device_linked)
 	GameManager.PlayerReady.connect(_on_player_ready)
@@ -69,4 +74,4 @@ func _on_player_ready() -> void:
 		
 		# Load next scene
 		print("Load next level")
-		get_tree().change_scene_to_packed(next_level)
+		get_tree().change_scene_to_packed(GameManager.game_level)

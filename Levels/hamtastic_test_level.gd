@@ -5,21 +5,19 @@ extends Node2D
 
 @onready var player_spawner: PlayerSpawner = $PlayerSpawner
 var players_dead : int = 0
-
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	players_dead = 0
 	player_spawner.spawn_players()
 	GameManager.playerDied.connect(_onplayerdeath)
 	
 	pass # Replace with function body.
-	
-func _onplayerdeath() -> void:
-	var total_players = GameManager.players.size()
-	players_dead +=1
-	if players_dead >= total_players-1:
-		print("trumpets")
-	
 
+func _process(delta: float) -> void:
+	var total_players = GameManager.players.size()
 	
+	if players_dead >= total_players-1:
+		get_tree().change_scene_to_packed(GameManager.upgrade_level)
+
+func _onplayerdeath() -> void:
+	players_dead +=1

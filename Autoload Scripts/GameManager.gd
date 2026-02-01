@@ -15,3 +15,6 @@ var rounds_played : int = 0
 
 func add_players(player: PlayerData) -> void:
 	players.append(player)
+
+var upgrade_level : PackedScene
+var game_level : PackedScene

@@ -15,8 +15,6 @@ var player_states : Array[PlayerState]
 
 @export var card_amount: int = 5
 
-@export var next_level : PackedScene
-
 var player_1_upgrade_index : int = 0
 var player_2_upgrade_index : int = 0
 var player_3_upgrade_index : int = 0
@@ -27,6 +25,12 @@ enum PlayerState {
 	ApplyingUpgrade,
 	Ready,
 }
+
+func _process(_delta: float) -> void:
+	if players_ready == players.size():
+		print("Load next level")
+		get_tree().change_scene_to_packed(GameManager.game_level)
+		
 
 func _ready() -> void:
 	if players.size() > 0:
@@ -120,10 +124,6 @@ var players_ready : int = 0
 
 func _on_player_finsihed_upgrading() -> void:
 	players_ready += 1
-	
-	if players_ready == players.size():
-		print("Load next level")
-		get_tree().change_scene_to_packed(next_level)
 
 func select_upgrade_slot() -> void:
 	var index : int = -1

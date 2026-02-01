@@ -10,7 +10,6 @@
 [ext_resource type="Resource" uid="uid://cc55dv1ioy4er" path="res://Spells/Spell Data Blobs/Shotgun Spell.tres" id="6_c16kk"]
 [ext_resource type="Resource" uid="uid://phrnsbslk707" path="res://Spells/Spell Data Blobs/SplitBoltSpell.tres" id="7_kk6la"]
 [ext_resource type="Resource" uid="uid://dltq5786wtuss" path="res://Spells/Spell Data Blobs/SplitLobSpell.tres" id="8_vog5p"]
-[ext_resource type="PackedScene" uid="uid://dt6xiqj7cgary" path="res://Levels/Hamtastic test level.tscn" id="9_c16kk"]
 
 [node name="Player Upgrade Menu" type="Control" unique_id=223752700 node_paths=PackedStringArray("upgrade_cards")]
 layout_mode = 3
@@ -22,7 +21,6 @@ grow_vertical = 2
 script = ExtResource("1_na53c")
 all_magic_upgrades = Array[ExtResource("3_gkyvq")]([ExtResource("4_c16kk"), ExtResource("5_kk6la"), ExtResource("5_gkyvq"), ExtResource("6_c16kk"), ExtResource("7_kk6la"), ExtResource("8_vog5p")])
 upgrade_cards = [NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot1"), NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot2"), NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot3"), NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot4"), NodePath("VBoxContainer/Upgrade Select Middle/UpgradeSpellSlot5")]
-next_level = ExtResource("9_c16kk")
 
 [node name="Background Image" type="TextureRect" parent="." unique_id=293172243]
 layout_mode = 1
