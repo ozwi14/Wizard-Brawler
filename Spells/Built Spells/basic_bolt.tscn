@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cb8ybmc6suwja"]
+
+[ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_fqagb"]
+[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_5tpu6"]
+[ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="3_17ibs"]
+[ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="4_f11l0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
+
+[node name="spell_bolt" type="CharacterBody2D" unique_id=1082149160]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_fqagb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_5tpu6")
+
+[node name="Wall Collider" type="CollisionShape2D" parent="." unique_id=352763157]
+shape = SubResource("RectangleShape2D_mr5cl")
+
+[node name="Collison Spawner" parent="." unique_id=288123730 instance=ExtResource("3_17ibs")]
+
+[node name="Spell Spawner" parent="Collison Spawner" unique_id=1323723097 instance=ExtResource("4_f11l0")]
+position = Vector2(-3, 0)
+rotation = -3.132866
+
+[connection signal="child_entered_tree" from="Wall Collider" to="Wall Collider" method="_on_child_entered_tree"]

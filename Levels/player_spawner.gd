@@ -3,6 +3,7 @@ class_name PlayerSpawner extends Node2D
 @export var spawn_points: Array[Node2D]
 @export var player_scene: PackedScene 
 
+
 @export var debug_spawn_players : bool = false
 
 # Called when the node enters the scene tree for the first time.

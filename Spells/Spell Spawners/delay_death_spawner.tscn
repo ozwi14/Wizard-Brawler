@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bv7i2dwugewt4"]
+
+[ext_resource type="Script" uid="uid://cdxsh7kdh18gt" path="res://Spells/Spell Spawners/delay_death_spawner.gd" id="1_et5ou"]
+[ext_resource type="PackedScene" uid="uid://lsc3jn1ijr47" path="res://Spells/Spell Archetypes/spell_bolt.tscn" id="2_4vupy"]
+
+[node name="Delay Split" type="Node2D" unique_id=1482470163]
+script = ExtResource("1_et5ou")
+child_spell = ExtResource("2_4vupy")

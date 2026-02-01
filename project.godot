@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Wizard Brawler"
-run/main_scene="uid://b2ygysseoha0o"
+run/main_scene="uid://dt6xiqj7cgary"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -126,3 +126,5 @@ action_start={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+limits/opengl/max_renderable_lights=64
+limits/opengl/max_lights_per_object=32

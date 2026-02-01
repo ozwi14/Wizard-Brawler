@@ -2,34 +2,28 @@
 
 [ext_resource type="Script" uid="uid://bcjqkop1asjwk" path="res://Spells/Spell Code/spell_lob.gd" id="1_hfvw7"]
 [ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_0leds"]
-[ext_resource type="PackedScene" uid="uid://bv7i2dwugewt4" path="res://Spells/Spell effects/delay_split.tscn" id="3_d3hxa"]
-[ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Spell Archetypes/spell_lob.tscn" id="4_gniq4"]
+[ext_resource type="PackedScene" uid="uid://bv7i2dwugewt4" path="res://Spells/Spell Spawners/delay_death_spawner.tscn" id="3_d3hxa"]
+[ext_resource type="PackedScene" uid="uid://bd4rtdbgu8tey" path="res://Spells/Built Spells/spell_lob.tscn" id="4_gniq4"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="5_mow12"]
+[ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="6_gniq4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_poaw0"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-
-[node name="spell_lob" type="CharacterBody2D" unique_id=1082149160]
+[node name="potion_split" type="CharacterBody2D" unique_id=1082149160]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_hfvw7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_0leds")
 
 [node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")
 disabled = true
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1243700480]
-process_material = SubResource("ParticleProcessMaterial_poaw0")
-
-[node name="Delay Split" parent="." unique_id=1482470163 node_paths=PackedStringArray("timer", "spell_spawners") instance=ExtResource("3_d3hxa")]
+[node name="Delay Split" parent="." unique_id=1482470163 instance=ExtResource("3_d3hxa")]
 child_spell = ExtResource("4_gniq4")
-timer = NodePath("Timer")
-spell_spawners = [NodePath("Spell Spawner"), NodePath("Spell Spawner2"), NodePath("Spell Spawner3")]
 
 [node name="Timer" type="Timer" parent="Delay Split" unique_id=1215500890]
 wait_time = 0.5
@@ -46,3 +40,9 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="Spell Spawner3" parent="Delay Split" unique_id=1155663078 instance=ExtResource("5_mow12")]
 position = Vector2(0, -1)
 rotation = 0.832522
+
+[node name="Collison Spawner" parent="." unique_id=1693829533 instance=ExtResource("6_gniq4")]
+
+[node name="Spell Spawner" parent="Collison Spawner" unique_id=674458816 instance=ExtResource("5_mow12")]
+position = Vector2(-3, 0)
+rotation = -3.159046
