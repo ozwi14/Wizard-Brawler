@@ -30,4 +30,5 @@ func _physics_process(delta: float) -> void:
 			if col.has_method("_player_jump"):
 				var player: Player = col
 				if player_id != player.player_data.player_id:
+					GameManager.playerDied.emit()
 					player.queue_free()

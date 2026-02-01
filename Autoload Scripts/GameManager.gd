@@ -7,6 +7,7 @@ var possible_spells : Array[SpellSelectionDataWrapper]
 
 signal DeviceLinkedToPlayer
 signal PlayerReady
+signal playerDied
 
 signal PlayerFinishedUpgrading
 
