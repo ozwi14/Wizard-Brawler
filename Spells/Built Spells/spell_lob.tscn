@@ -1,9 +1,64 @@
 [gd_scene format=3 uid="uid://bd4rtdbgu8tey"]
 
 [ext_resource type="Script" uid="uid://bcjqkop1asjwk" path="res://Spells/Spell Code/spell_lob.gd" id="1_t2aj0"]
-[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_fcq60"]
+[ext_resource type="Texture2D" uid="uid://dcfwspprpjqic" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_01.png" id="2_244bp"]
+[ext_resource type="Texture2D" uid="uid://bgcy52ixt54id" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_02.png" id="3_48u75"]
 [ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="3_df4yd"]
+[ext_resource type="Texture2D" uid="uid://b2stc0s2swx3n" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_03.png" id="4_li7yq"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="4_n4bau"]
+[ext_resource type="Texture2D" uid="uid://dq16cxe02oqyj" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_04.png" id="5_wxdgg"]
+[ext_resource type="Texture2D" uid="uid://duxtnnbu72lpn" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_05.png" id="6_jun5i"]
+[ext_resource type="Texture2D" uid="uid://ybf8ggufp36b" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_06.png" id="7_euvyc"]
+[ext_resource type="Texture2D" uid="uid://bhnxo6bry5wwf" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_07.png" id="8_m71mk"]
+[ext_resource type="Texture2D" uid="uid://d25ari3sk03pk" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_08.png" id="9_qejle"]
+[ext_resource type="Texture2D" uid="uid://cv71mlacdu0o2" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_09.png" id="10_in6g4"]
+[ext_resource type="Texture2D" uid="uid://ditipykr5pi7h" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_10.png" id="11_j8wgr"]
+[ext_resource type="Texture2D" uid="uid://dxdgdktivayhn" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_11.png" id="12_gf1fp"]
+[ext_resource type="Texture2D" uid="uid://bh7anrpg7gs3r" path="res://Art/water and fire magic sprite/Water Ball/PNG/Water Ball_Frame_12.png" id="13_cgwel"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3qytc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_244bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_48u75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_li7yq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wxdgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jun5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_euvyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_m71mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qejle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_in6g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_j8wgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gf1fp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cgwel")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -12,9 +67,11 @@ collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_t2aj0")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_fcq60")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1472972640]
+scale = Vector2(0.08, 0.08)
+sprite_frames = SubResource("SpriteFrames_3qytc")
+autoplay = "default"
+speed_scale = 4.0
 
 [node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c223300sipqbg"
+path="res://.godot/imported/49669__ejfortin__dual-energy-daggers-7.wav-1f1c6492067faacf0f0a4a5cbe770b5d.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/49669__ejfortin__dual-energy-daggers-7.wav"
+dest_files=["res://.godot/imported/49669__ejfortin__dual-energy-daggers-7.wav-1f1c6492067faacf0f0a4a5cbe770b5d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

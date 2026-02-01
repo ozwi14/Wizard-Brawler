@@ -1,10 +1,49 @@
 [gd_scene format=3 uid="uid://cjqjhqyjtbcfj"]
 
 [ext_resource type="Script" uid="uid://dtcre1xp8blks" path="res://Spells/Spell Code/spell_bolt.gd" id="1_c3qhf"]
-[ext_resource type="Texture2D" uid="uid://ho1rrct4vals" path="res://icon.svg" id="2_84or8"]
+[ext_resource type="Texture2D" uid="uid://c4l5oxdp0ic6s" path="res://Art/water and fire magic sprite/Fire Spell/PNG/Fire Spell_Frame_01.png" id="2_va5vm"]
 [ext_resource type="PackedScene" uid="uid://bv7i2dwugewt4" path="res://Spells/Spell Spawners/delay_death_spawner.tscn" id="3_78rcs"]
+[ext_resource type="Texture2D" uid="uid://bdq2qlkd1fn76" path="res://Art/water and fire magic sprite/Fire Spell/PNG/Fire Spell_Frame_02.png" id="3_nnbbi"]
+[ext_resource type="Texture2D" uid="uid://cttpkp3oy6k5x" path="res://Art/water and fire magic sprite/Fire Spell/PNG/Fire Spell_Frame_03.png" id="4_dwiiu"]
 [ext_resource type="PackedScene" uid="uid://dvh6aduu1or74" path="res://Spells/Spell Spawners/spell_spawner.tscn" id="4_im7sa"]
+[ext_resource type="Texture2D" uid="uid://d3l73rmkwlwqa" path="res://Art/water and fire magic sprite/Fire Spell/PNG/Fire Spell_Frame_04.png" id="5_1yk2p"]
 [ext_resource type="PackedScene" uid="uid://brblx6nd8fmct" path="res://Spells/Spell Spawners/collision_spawner.tscn" id="5_78rcs"]
+[ext_resource type="Texture2D" uid="uid://1jx1b4f75vao" path="res://Art/water and fire magic sprite/Fire Spell/PNG/Fire Spell_Frame_05.png" id="6_ep1i1"]
+[ext_resource type="Texture2D" uid="uid://bribxev81ovp3" path="res://Art/water and fire magic sprite/Fire Spell/PNG/Fire Spell_Frame_06.png" id="7_cb4i2"]
+[ext_resource type="Texture2D" uid="uid://cau1y4pa5ydj8" path="res://Art/water and fire magic sprite/Fire Spell/PNG/Fire Spell_Frame_07.png" id="8_2ougl"]
+[ext_resource type="Texture2D" uid="uid://b6q3d4ax4uot" path="res://Art/water and fire magic sprite/Fire Spell/PNG/Fire Spell_Frame_08.png" id="9_jc423"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_each1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_va5vm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nnbbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dwiiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1yk2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ep1i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cb4i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ougl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jc423")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr5cl"]
 
@@ -13,9 +52,11 @@ collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_c3qhf")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399607380]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1087182871]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_84or8")
+sprite_frames = SubResource("SpriteFrames_each1")
+autoplay = "default"
+speed_scale = 2.0
 
 [node name="Rectangle Collider" type="CollisionShape2D" parent="." unique_id=352763157]
 shape = SubResource("RectangleShape2D_mr5cl")

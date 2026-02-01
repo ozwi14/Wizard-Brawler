@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dkrx1l87mqnev"
+path="res://.godot/imported/624473__jacobisalemon__ice-chunk-drops-processed Audio Extracted.wav-32d7b8cd1cd8191839b7d9b64501dbcc.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/624473__jacobisalemon__ice-chunk-drops-processed Audio Extracted.wav"
+dest_files=["res://.godot/imported/624473__jacobisalemon__ice-chunk-drops-processed Audio Extracted.wav-32d7b8cd1cd8191839b7d9b64501dbcc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
