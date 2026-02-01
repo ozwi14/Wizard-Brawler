@@ -57,7 +57,7 @@ func clear_image() -> void:
 	bottom_second_chain_box.texture = null
 
 func _can_select_level() -> bool:
-	var selected_chain : Array[SpellSelectionDataWrapper]
+	var selected_chain : Array[SpellItemData]
 	if selected_level == 0:
 		selected_chain = player_data.x_spell_chains
 	if selected_level == 1:
@@ -90,7 +90,6 @@ func move_up() -> void:
 		if _can_select_level():
 			break
 	
-	find_first_free()
 	update()
 
 func move_down() -> void:
@@ -103,27 +102,7 @@ func move_down() -> void:
 		decrease_selected_level()
 		if _can_select_level():
 			break
-	
-	find_first_free()
 	update()
-
-func find_first_free() -> void:
-	var selected_chain : Array[SpellSelectionDataWrapper]
-	
-	if selected_level == 0:
-		selected_chain = player_data.x_spell_chains
-	if selected_level == 1:
-		selected_chain = player_data.y_spell_chains
-	if selected_level == 2:
-		selected_chain = player_data.b_spell_chains
-	
-	if selected_chain.size() > 2:
-		assert(false, "Selected level [%d] is already full" % selected_level)
-	
-	var wrapper : SpellSelectionDataWrapper = SpellSelectionDataWrapper.new()
-	wrapper.selected = false
-	wrapper.spell_data = chain_user_selected
-	selected_chain.append(wrapper)
 
 var held_time_required : float = 0.5
 var held_time : float = 0.0
@@ -137,6 +116,17 @@ func _process(delta: float) -> void:
 		
 		if held_time >= held_time_required:
 			enabled = false
+			
+			var selected_chain : Array[SpellItemData]
+			if selected_level == 0:
+				selected_chain = player_data.x_spell_chains
+			if selected_level == 1:
+				selected_chain = player_data.y_spell_chains
+			if selected_level == 2:
+				selected_chain = player_data.b_spell_chains
+			
+			selected_chain.append(chain_user_selected)
+			
 			GameManager.PlayerFinishedUpgrading.emit()
 	else:
 		held_time = 0
@@ -164,6 +154,25 @@ func update():
 		bottom_first_chain_box.texture = player_data.b_spell_chains[0].spell_data.icon
 	if array_length > 1:
 		bottom_second_chain_box.texture = player_data.b_spell_chains[1].spell_data.icon
+	
+	if selected_level == 0:
+		array_length = player_data.x_spell_chains.size()
+		if array_length == 0:
+			top_first_chain_box.texture = chain_user_selected.icon
+		if array_length == 1:
+			top_second_chain_box.texture = chain_user_selected.icon
+	if selected_level == 1:
+		array_length = player_data.y_spell_chains.size()
+		if array_length == 0:
+			middle_first_chain_box.texture = chain_user_selected.icon
+		if array_length == 1:
+			middle_second_chain_box.texture = chain_user_selected.icon
+	if selected_level == 2:
+		array_length = player_data.b_spell_chains.size()
+		if array_length == 0:
+			bottom_first_chain_box.texture = chain_user_selected.icon
+		if array_length == 1:
+			bottom_second_chain_box.texture = chain_user_selected.icon
 
 func highlight_selected():
 	var array_length: int

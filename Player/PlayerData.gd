@@ -5,6 +5,6 @@ class_name PlayerData extends Resource
 @export var color: Color
 @export var spells: Array[SpellItemData]
 
-@export var x_spell_chains : Array
-@export var y_spell_chains : Array
-@export var b_spell_chains : Array
+@export var x_spell_chains : Array[SpellItemData]
+@export var y_spell_chains : Array[SpellItemData]
+@export var b_spell_chains : Array[SpellItemData]
